@@ -1,0 +1,120 @@
+@import url("./styles/reset.css");
+
+#default {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  main {
+    width: 390px;
+    height: 800px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    header {
+      width: 100%;
+      height: 47px;
+      border: 1px solid #ccc;
+    }
+    #main-title {
+      font-size: 1.8rem;
+      margin: 50px 35px 40px;
+    }
+    #navigation {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 30px;
+      margin-left: 35px;
+      .nav-item {
+        font-size: 1.2rem;
+        font-weight: 700;
+        &:first-child {
+          background: #000;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 28px;
+          .fa-heart {
+            color: crimson;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+    section {
+      width: 100%;
+      padding: 40px 35px 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          img {
+            width: 28px;
+            height: 28px;
+          }
+          .desc {
+            display: flex;
+            flex-direction: column;
+            .user-name {
+              font-size: 0.7rem;
+            }
+          }
+          .date {
+            font-size: 0.6rem;
+            color: #c5c5c5;
+          }
+        }
+        .user-img {
+          width: 100%;
+          height: 195px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .art-title {
+          /* font-size: 1.11rem;
+          font-weight: bold; (폰트 설정 한줄로 생략 가능) */
+          font: bold 1.11rem/1 "arial";
+        }
+        .sub-detail {
+          p {
+            font: normal 0.58rem/1 "arial";
+          }
+        }
+        .art-info {
+          .like,
+          .view {
+            font: bold 0.82rem/1 "arial";
+            color: #e9e7e7;
+            i {
+              color: crimson;
+              margin-right: 3px;
+              &.fa-eye {
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

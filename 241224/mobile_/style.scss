@@ -1,0 +1,131 @@
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+@mixin bottonStyle {
+  margin: 0 auto;
+  width: 340px;
+  height: 44px;
+  display: block;
+  color: map-get($contents-colors, textColor);
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+@mixin headerStyle {
+  background: map-get($contents-colors, lightColor);
+  padding: 60px 33px 135px;
+  header {
+    position: relative;
+    width: 100%;
+    height: 142px;
+    h4 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.17rem;
+      font-weight: lighter;
+    }
+    p {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: 1.47rem;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    width: 428px;
+    height: 926px;
+    background: map-get($contents-colors, bgColor);
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+    padding-top: 60px;
+    #topContents {
+      text-align: center;
+      img {
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: 1.17rem;
+        font-weight: lighter;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    #snsLogon {
+      text-align: center;
+      margin: 200px 0;
+      h4 {
+        font-size: 0.94rem;
+        font-weight: lighter;
+        color: map-get($contents-colors, subColor);
+        margin-bottom: 10px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    #bottomContents {
+      .btn {
+        @include bottonStyle;
+        background: map-get($contents-colors, btnColor);
+        .fa-download {
+          transform: rotate(-90deg);
+        }
+      }
+      #userSearch {
+        text-align: center;
+        color: map-get($contents-colors, textColor);
+        font-size: 1.17rem;
+        span {
+          &:first-child {
+            position: relative;
+            margin-right: 78px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 25%;
+              right: -40px;
+              width: 2px;
+              height: 14px;
+              background: map-get($contents-colors, textColor);
+            }
+          }
+        }
+      }
+    }
+    &.IntroBg {
+      @include headerStyle;
+      section {
+        margin: 50px 0 106px;
+      }
+      footer {
+        .btn {
+          @include bottonStyle;
+          margin-top: 10px;
+          background: map-get($contents-colors, bgColor);
+        }
+      }
+    }
+    &.friendsBg {
+      @include headerStyle;
+      header {
+        height: 172px;
+      }
+    }
+  }
+}
