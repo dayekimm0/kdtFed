@@ -68,6 +68,7 @@ body main #bottomContents .btn {
   line-height: 44px;
   border-radius: 8px;
   margin-bottom: 12px;
+  z-index: 2;
   background: #f5efef;
 }
 body main #bottomContents .btn .fa-download {
@@ -96,6 +97,7 @@ body main.IntroBg {
   padding: 60px 33px 135px;
 }
 body main.IntroBg header {
+  z-index: 2;
   position: relative;
   width: 100%;
   height: 142px;
@@ -129,14 +131,17 @@ body main.IntroBg footer .btn {
   line-height: 44px;
   border-radius: 8px;
   margin-bottom: 12px;
+  z-index: 2;
   margin-top: 10px;
   background: #ffde03;
 }
 body main.friendsBg {
   background: #ffffff;
   padding: 60px 33px 135px;
+  position: relative;
 }
 body main.friendsBg header {
+  z-index: 2;
   position: relative;
   width: 100%;
   height: 142px;
@@ -159,4 +164,61 @@ body main.friendsBg header p span {
 }
 body main.friendsBg header {
   height: 172px;
+}
+body main.friendsBg section {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body main.friendsBg section ul li {
+  text-align: center;
+}
+body main.friendsBg section ul li a {
+  font-size: 2.35rem;
+}
+body main.friendsBg footer .buttons {
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+  gap: 12px;
+}
+body main.friendsBg footer .buttons .btn {
+  margin: 0 auto;
+  width: 340px;
+  height: 44px;
+  display: block;
+  color: #606060;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  z-index: 2;
+  width: 174px;
+  background: #ffde03;
+}
+body main.friendsBg footer .buttons .btn:first-child {
+  background: #f5efef;
+}
+body main.friendsBg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  top: 0;
+}
+body main.friendsBg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  bottom: 0;
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */
