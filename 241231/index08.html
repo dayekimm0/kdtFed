@@ -5,25 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .box {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .box::before {
-        content: attr(data-title);
-        position: absolute;
-        top: -10px;
-        left: 50px;
-        transform: translateX(-50%);
-        background-color: #f9f9f9;
-        padding: 0 10px;
-        font-weight: bold;
+      textarea {
+        resize: none;
       }
     </style>
   </head>
@@ -45,10 +28,35 @@
       <fieldset>
         <legend><b>메일링</b></legend>
         <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요! (*복수 선택 가능)</p>
-        <input type="checkbox" name="news1" />해외단신
-        <input type="checkbox" name="news2" />5분회화
-        <input type="checkbox" name="news3" />모닝팝스
+        <label for="news01">
+          <input type="checkbox" name="news01" id="news01" />해외단신</label
+        >
+        <label for="news02">
+          <input type="checkbox" name="news02" id="news02" />5분회화</label
+        >
+        <label for="news03">
+          <input type="checkbox" name="news03" id="news03" />모닝팝스</label
+        >
       </fieldset>
+      <p>하고 싶은 이야기</p>
+      <textarea
+        name="my story"
+        id="mystory"
+        placeholder="당신의 이야기"
+        rows="10"
+        cols="50"
+      ></textarea>
+      <br />
+      <h4>오늘 저녁 분식은 어떠세요?</h4>
+      <select name="food" id="food">
+        <option value="none" selected disabled>
+          원하시는 메뉴를 선택해주세요
+        </option>
+        <option value="food01">김밥</option>
+        <option value="food02">떡볶이</option>
+        <option value="food03">순대</option>
+        <option value="food04">붕어빵</option>
+      </select>
     </form>
   </body>
 </html>
