@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .box::before {
+        content: attr(data-title);
+        position: absolute;
+        top: -10px;
+        left: 50px;
+        transform: translateX(-50%);
+        background-color: #f9f9f9;
+        padding: 0 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+        <legend><b>신청과목</b></legend>
+        <p>이 달에 신청할 과목을 선택하세요! (*1과목만 선택가능)</p>
+        <label for="english01">
+          <input type="radio" name="subject" />회화</label
+        >
+        <label for="english02">
+          <input type="radio" name="subject" />문법</label
+        >
+        <label for="english03">
+          <input type="radio" name="subject" />작문
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend><b>메일링</b></legend>
+        <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요! (*복수 선택 가능)</p>
+        <input type="checkbox" name="news1" />해외단신
+        <input type="checkbox" name="news2" />5분회화
+        <input type="checkbox" name="news3" />모닝팝스
+      </fieldset>
+    </form>
+  </body>
+</html>

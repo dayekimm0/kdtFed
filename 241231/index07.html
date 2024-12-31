@@ -6,8 +6,23 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="http://127.0.0.1:5500/index07.html" method="get">
+    <form action="http://127.0.0.1:5500/index07.html" method="post">
       <input type="text" name="search" />
+      <input type="password" />
+      <input type="file" />
+      <input type="button" value="나는 버튼이야" /><br />
+      <h4>당신이 좋아하는 스포츠를 선택해주세요(복수선택 가능)</h4>
+      <input type="checkbox" name="sports1" />축구
+      <input type="checkbox" name="sports2" />야구
+      <input type="checkbox" name="sports3" />농구
+      <input type="checkbox" name="sports4" />배드미턴
+      <input type="checkbox" name="sports5" />배구
+      <input type="checkbox" name="sports6" />족구<br />
+      <h4>당신의 성별은?</h4>
+      <input id="female" type="radio" name="gender" /><label for="female"
+        >여자</label
+      >
+      <label><input type="radio" name="gender" />남자</label><br />
       <input type="submit" value="검색" />
     </form>
   </body>
