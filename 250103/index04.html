@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전후문자선택자</title>
+    <style>
+      p {
+        counter-increment: num;
+        &::before {
+          content: counter(num) ".";
+        }
+        &::after {
+          content: "- " attr(data-page) "page";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p data-page="52">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit
+      vero eos voluptas omnis excepturi consectetur nesciunt eaque beatae
+      eveniet? Minus, in recusandae natus quae nemo sapiente eveniet corrupti
+      magnam?
+    </p>
+    <p data-page="273">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus autem porro
+      ipsa, voluptatibus nesciunt omnis voluptates necessitatibus libero.
+      Veritatis, tenetur beatae quod tempore laboriosam laudantium nobis
+      nesciunt doloremque sequi similique. Vitae, id aperiam sed dolorem
+      expedita itaque quisquam aliquid nulla cum officia fugiat nisi error dicta
+      similique amet nesciunt nobis iste natus omnis doloribus! Nisi nobis
+      corrupti aliquam inventore iusto. Cum dolor maxime laudantium iure
+      eligendi explicabo veniam facere, architecto laborum sapiente iste, enim
+      aspernatur possimus eius esse accusamus, quae voluptatibus similique
+      consectetur fugiat placeat magnam. Assumenda soluta blanditiis magni.
+      Dolor laboriosam repellendus rem animi tempora libero repudiandae, aut
+      fugiat enim dolores, fugit laborum est nulla itaque quae eius dolorem
+      culpa quasi. Officiis soluta tempora perspiciatis, est ipsa quia culpa.
+    </p>
+  </body>
+</html>
