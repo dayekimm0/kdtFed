@@ -1,0 +1,18 @@
+241230
+
+JS 프로그래밍 언어 입문자
+
+슬라이드 이벤트 (*slick)
+
+
+IA = Information Architecture
+
+웹 서비스 & 제품 전체적인 구조
+
+=> Site map
+
+깃 허브에 업로드
+git add .
+git status
+git commit -m "kdtFed"
+git push origin master

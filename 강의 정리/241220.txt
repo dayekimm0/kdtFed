@@ -1,0 +1,102 @@
+241220 
+
+git : 형상 기억 및 버전 관리 툴
+
+* 로컬 컴퓨터 내 사용할 수 있는 프로그램
+* git 공식 사이트 다운로드 > 로컬 컴퓨터에서 git 설치 완료
+* git-hub 사이트 접속 후 회원 가입 필요
+
+
+
+* 내 로컬 컴퓨터 내 git 소유주 정보 등록
+    > cmd(*관리자모드) 접속
+    > git config --global user.name "git-hub name 정보"
+    > git config --global user.email "git-hub email 정보"
+    > 위 정보가 정상적으로 잘 입력되었는지 조회 명령어 : git config --list
+
+
+
+* 로컬 컴퓨터 > 작업 폴더 생성(*working Directory 부름)
+* 신규 생성된 작업 폴더 > pure data가 존재 (*index.html)
+* 신규 작업 된 작업 폴더 > git init(*버전을 관리하기 위해 초기에 세팅하는 명령어)
+    => staging area // repository 를 사용하기 위한 목적
+* 원래 pure data 상태였던 파일인 unstracked data 형태가 됨
+* untracked data를 staging area 보관 : git add .
+* 정상적으로 staging area 잘 보관되었는지 확인 : git status
+* staging area
+    : 실제 형상 및 버전 관리를 해주는 repository 공간으로 넘어가기 전 단계의 임시 장소
+* staging area 보관된 area : unmodified data
+    → 어떤 이름 // 어떤 목적 => 명시적으로 알 수 있도록 이름을 붙여줘야 함.
+* staging area => repository : git commit -m "241220(원하는 파일명)"
+* 위 단계까지가 내 로컬 컴퓨터, 내 git을 활용해서 형상 기억 및 버전 관리하는 단계
+
+
+>  현재까지의 단계의 단점 : 내 로컬 컴퓨터에 존재하는 해당 데이터는 같이 협업하는 다른 개발자들은 볼 수 없음
+→ git-hub
+
+
+git-hub : 로컬 컴퓨터 내 관리되고 있는 data를 원격 저장소 내 repository를 끌어와서 보관, 관리, 저장,  공유해줄 수 있는 hub과 같은 역할을 하는 cloud platform service 사이트
+
+* git-hub 내 repository를 신규 생성
+
+
+
+git & git-hub 연결 방법
+
+* 내 로컬 컴퓨터 터미널 > git remote add origin "내 git-hub repository 주소"
+* 원격 repository & 로컬 repository가 정상적으로 연결되었는지 확인하는 방법
+
+> 터미널 : git remote -v => fetch() // pull() 정상적으로 출력된다면 잘 연결된 것
+
+
+git & git-hub이 정상적으로 연결되었다는 전제
+
+* 내 로컬 컴퓨터 터미널 > git push origin(= 내 git-hub repository 주소) master 입력
+
+>  내 로컬 컴퓨터 데이터를  git-hub repository로 전송할 수 있게 됨.
+(*origin : repository의 short name)
+
+
+*git-hub 올라와 있는 data를 내려받는 방법 2가지
+
+1) 내려받고 싶은 repository에 접속 후 우측 상단 "code" 녹색 버튼 클릭 후 zip download
+
+2) 로컬 컴퓨터에 신규 폴더 생성 후 해당 폴더에서 vscode 오픈
+> 하단 터미널 접속 : git clone git-hub repository 주소
+(*최초에 git-hub repository에 데이터를 업로드한 개발자의 .git까지 모두 복제해온다)
+
+3) 로컬 컴퓨터에 신규 폴더 생성 후 해당 폴더에서 vscode 오픈
+> 하단 터미널 접속 :
+git init
+git pull git-hub repository 주소
+
+git fork : 타의 git-hub 내 repository를 즐겨찾기처럼 내 repository
+
+>  원래 fork의 의미는 타인의 repository 안에 어떤 데이터 정보들을 내가 업데이트하고 공유함으로써 더 좋은 데이터로 발전시킬 수 있도록 하기 위한 목적
+
+
+TP로 git & git-hub
+
+
+Branch : 최상위 repository 폴더 안에 하위 세부폴더
+
+현, company-project repository
+
+* master : CEO
+* 신입사원 전용 : Freshman
+* branch 만드는 명령어
+
+git checkout -b freshman
+git add .    → staging area로 보냄
+git commit -m "freshman first commit"
+git push origin freshman
+
+em (element)
+: 부모요소가 가지고 있는 속성값
+
+2em = 16 * 2 = 32px
+1.5em = 16 * 1.5 = 24px
+1.17em = 16 *1.17 = 18px
+16px
+
+rem (root element)

@@ -1,0 +1,160 @@
+241231
+
+해피뉴이어 
+
+
+* 웹 표준 : 웹 브라우저에서 구현될 수 있도록 코드를 작성하는 것을 정석에 맞춰서 사용
+* HTML 5.0 : Hyper Text Markup Language
+    Animation => 3D 기능 강화
+* Single Tag (홑태그)  => 여는 것과 동시에 닫는 역할을 하는 태그
+
+ex) <hr /> , <br/>, <img/>
+
+* Multi Tag(쌍태그) => 여는 것과 닫는 태그를 별도로 사용하는 태그
+
+1. h(n = 변수값)
+
+h1(가장큰) ~ h6(작은)
+<h1>heading - 1</h1>
+<h2>heading - 2</h2>
+<h3>heading - 3</h3>
+<h4>heading - 4</h4>
+<h5>heading - 5</h5>
+<h6>heading - 6</h6>
+
+
+1. p = paragraph
+2.  hr = horizontal Ruler
+
+> heading : 머리글 대표
+dummy text : 의미가 없는 문자열의 집합 - lorem
+
+1. br = break 
+2. a = anchor
+
+기본 속성(*attribute)을 반드시 유지해야 하는 태그
+href = hyper reference
+target 옵션
+
+1. b = bold
+2. i = italic
+3. list Tags = 목록
+
+-ol : order list → 부모
+-ul : unoder list → 자식
+-li : list
+
+* 중첩 목록 > 목록 안에 또 다른 목록
+
+1. Table Tags = 테이블 표를 만들기 위한 태그
+
+행 row - 가로 줄 / 열 column -세로 줄
+-table : 테이블을 생성하고자 할 때 사용하는 태그
+-tr : table row 행을 만들겠다는 정의
+-th(강조) :table heading (*생성된 열 안에서 대표 문구)
+-td : table data (*생성된 행 안에 열을 만들고자 할 때)
+-thead : 테이블 태그 내 머리
+-tbody : 테이블 태그 내 몸통
+-tfoot : 테이블 태그 내 다리
+-colgroup:테이블 내 열의 그룹화
+-col(행 과 열을 병합) : colgroup 안에서 몇 번째 열을 지칭해서 가져올 것인지 결정
+-caption : table 내 전용 타이틀 목록을 지정하고자 할 때
+-colspan :  테이블 내에 열을 병합하고자 할 때
+-rowspan : 테이블 내에 행을 병합하고자 할 때
+
+
+1. img : 이미지를 불러오고자 할 때
+
+-src => source => a태그의 href와 유사한 기능을 갖고 있는 속성
+-alt => alternate (대체제)
+
+
+1. Audio
+
+=> src audio 소스파일을 가져올 수 있도록 하는 속성
+=> controls audio 컨트롤러를 표기할 수 있도록 해주는 속성
+autoplay => 오디오를 자동으로 다시 재생할 수 있는 속성 
+-loop=> 무한으로 audio 재생을 하도록 해주는 속성
+
+
+1. video
+
+-audio속성과 동일
+-muted => 음소거// 최근 웹 브라우저들의 정책 
+과도한 멀티미디어 소스 광고 규제 강화
+
+
+1. form : 입력양식 태그
+
+-form 입력양식태그를 사용하겠다는 선언과도 같은 태그
+>서버와의 소통 && 사용자와의 관계성
+>action : 사용자가 입력한 값을 보낼 서버의 주소
+> method : 클라이언트와 서버가 통신을 하는 방법
+-get: 클라이언트가 서버에게 내가 원하는 값을 가져와
+-post : 클라이언트가 사용자에게 특정값을 받아서 서버의 공간에 해당값을 업데이트시키는 역할
+
+사용자는 웹 브라우저 내 상단 주소창을 통해서 특정  Url을 입력하는 행위는 사용자가 해당 페이지로 이동한다는 의미가 아닌 해당 서버에게 사용자인 나에게 해당  Url에 매칭되는 웹페이지를 나에게 가져다줘 라고 요청하는 행위를 의미 X
+
+
+* input
+
+text
+passdword
+submit
+reset
+button
+range
+date
+file
+checkbox
+radio
+image
+
+
+* label
+
+>for속성 => 속성값 = input태그의 id속성의 값과 동일해지는 순간 마법 => label&input =>일심동ㅊㅔ
+
+* textarea : 댓글, 코멘트 등의 사용자의 값을 입력받고
+* option : select 태그 내 여러 개의 옵션 값 중 하나로 구성하고자 할 때 사용하는 태그
+* select : 여러가지의 선택 사항 중 한가지를 선택할 수 있도록 해주는 태그
+
+
+
+
+1. 공간분할태그
+
+-해당 태그가 하나의 공간을 어떻게 사용할 수 있는지 정의해봄
+block - 태생부터 욕심이 많은 최다연
+>무조건 1개의 행에 본인만 사용할 수 있음 ㅈㄴ이기적이네 ㅋㅋ
+>굳이 너비(width)값을 세팅하지 않아도 됨
+>text-align: center
+inline -  태생부터 욕심이 없는 이타주의 성격
+>나의 너비가 100px밖에 안되니까 공간이 남은 영역은 다른 태그들과 사이좋게 같이 사용할 수 있음
+
+>두개의 공간분할태그의 가장 큰 차이점
+1) 수평 정렬 방식이 상이함
+2)마진,패딩값 적용 방식이 상이함
+>block태그는 상하좌우 모두 마진,패딩
+>inline 태그는 특별한 경우가 아니라면 패딩,마진 좌우측만 적용가능 // 부모요소에 flex가 적용되어 잇는 경우
+
+1. Semantic태그
+
+semantic : 의미론적인 (*태그에 의미를 부여하자)
+웹 표준을 지킨다
+
+웹 퍼블리셔 채용 // 프론트 엔드 채용
+>웹 표준 개발
+>태그에 작성 해야 하는 옵션 및 기본 속성을 정상적으로 작성
+>가급적 시맨틱태그 사용으로 상품 및 서비스 개발
+
+이해하고 자주 반복적으로 사용해서 자연스럽게 익숙해지고 암기될 수 있게끔 하세용 넹
+어거지로 공부하지 마세요 지쳐요 넹
+
+figure table과 관련된 정보를 같이 쓰고자 할 때
+
+* CSS 3.0 : Cascading Style Sheet
+    동적 페이지 구현 기능 
+* 언어 - 시대 (X)
+* 시대 - 언어 (O)
+
