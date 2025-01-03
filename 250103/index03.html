@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+      ul {
+        display: flex;
+        li {
+          padding: 15px;
+          &:first-child {
+            background: tomato;
+          }
+          &:last-child {
+            background: gold;
+          }
+          &:nth-child(even) {
+            background: crimson;
+          }
+          &:nth-child(odd) {
+            background: yellowgreen;
+          }
+        }
+      }
+      #headerBox {
+        h3:first-of-type {
+          color: crimson;
+        }
+        h1:last-of-type {
+          color: blueviolet;
+        }
+        h2:nth-of-type(2) {
+          color: chocolate;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <hr />
+    <div id="headerBox">
+      <h1>Header - 1</h1>
+      <h2>Header - 2</h2>
+      <h3>Header - 3</h3>
+      <h3>Header - 3</h3>
+      <h2>Header - 2</h2>
+      <h1>Header - 1</h1>
+    </div>
+  </body>
+</html>

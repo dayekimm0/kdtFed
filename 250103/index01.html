@@ -7,19 +7,80 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="./style01.css" /> -->
     <style>
-      h1 {
-        background: crimson;
+      * {
+        margin: 0;
+        padding: 0;
       }
+
+      /* h1 {
+        background: crimson;
+      } */
       p {
         color: brown;
         &#special {
           color: dodgerblue;
         }
       }
+      /* li {
+        &.second {
+          background: aqua;
+        }
+        &.fourth {
+          background: aqua;
+        }
+      } */
+
+      .bgStyle {
+        background: aqua;
+      }
+
+      /* input {
+        &[type="text"] {
+          background: crimson;
+        }
+        &[type="password"] {
+          background: dodgerblue;
+        }
+      } */
+      #header {
+        & > h1 {
+          color: brown;
+        }
+      }
 
       /* #special {
         color: dodgerblue;
       } */
+
+      #listEx {
+        #firstLi + li {
+          color: crimson;
+        }
+        #firstLi ~ li {
+          font-size: 30px;
+        }
+      }
+
+      h3 {
+        &:hover {
+          color: aqua;
+        }
+        &:active {
+          color: crimson;
+        }
+      }
+
+      input {
+        &:enabled {
+          background: greenyellow;
+        }
+        &:disabled {
+          background: gainsboro;
+        }
+        &:focus {
+          background: tomato;
+        }
+      }
     </style>
   </head>
   <body>
@@ -36,5 +97,30 @@
       aspernatur vitae veniam atque molestias consectetur nam incidunt inventore
       itaque? Qui, assumenda?
     </p>
+    <ul id="listEx">
+      <li id="firstLi">첫 번째</li>
+      <li class="bgStyle">두 번째</li>
+      <li>세 번째</li>
+      <li class="bgStyle">네 번째</li>
+    </ul>
+    <hr />
+    <form action="">
+      <input type="text" name="" id="" /><input type="password" name="" id="" />
+    </form>
+    <hr />
+    <div id="header">
+      <h1 class="title">Lorem Ipsum</h1>
+      <div id="nav">
+        <h1>Navigation</h1>
+      </div>
+      <h3>User Action Selector</h3>
+      <hr />
+      <form action="">
+        <h2>Enabled</h2>
+        <input type="text" name="enabled" id="enabled" enabled />
+        <h2>Disabled</h2>
+        <input type="text" name="disabled" id="disabled" disabled />
+      </form>
+    </div>
   </body>
 </html>
