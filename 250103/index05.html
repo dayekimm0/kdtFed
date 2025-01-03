@@ -42,12 +42,13 @@
             &::before {
               content: "";
               position: absolute;
-              left: 0;
+              left: 50%;
               bottom: 0;
               width: 0;
               height: 1px;
               background: dodgerblue;
               transition: all 0.5s;
+              transform: translateX(-50%);
             }
             &:hover::before {
               width: 100%;
