@@ -1,0 +1,70 @@
+250106
+
+* CSS 단위
+
+px : 고정 단위
+- 다양해진 device
+- 애초에 독립적인 device UI 구현 목적
+- 16px 기본베이스
+em : element = 요소
+-부모 요소를 기준으로 배수 계산
+rem : root element = 최고 뿌리 요소
+-body요소의 폰트 사이즈 값을 적용하고 모든 요소들은 body를 기준으로 배수 계산
+
+% : width || height 정의하고자 할 때
+-가변 그리드 : 부모 요소의 전체 너비가 변경될 때 해당 값에 비례해서 margin 혹은 padding의 간격도 변경되게 하고자 할 때 적용할 수 있는 단위
+-만약 부모 혹은 자식 요소 중에 height의 값이 적용된 적이 없다면, 그때는 height의 100%는 그냥 자식 요소의 기본 높이 값 만큼을 의미한다.
+-만약, 자식 요소 중에 height값을 인위적으로 적용하게 된다면 height:100%는 자식 요소의 높이 값을 적용한 높이 값 만큼으로 변경된다.
+-부모 요소의 높이 값이 구체적으로 정해진 상황에서는 height의 값을 가변적으로 변경했을 때 적용 !
+
+vw : viewport width => 사용자의 눈에 보여지는 공간에서의 총 너비 면적
+vh : viewport height => 사용자의 눈에 보여지는 공간에서의 총 높이 면적
+max-width // max-height
+min-width // min-height
+-부모 요소의 너비 값이 줄어들 때 같이 비례해서 줄어들더라도 최소한의 너비 값 이상으로 줄어들게 되면 그때에는 더 이상 같이 줄어들게 하지 않고 moin-width값을 적용 시키겠다는 의미
+
+가산 혼합 : 색을 더하면 더할수록 하얀색에 수렴
+웹 화면에 출력 되어지는 색상은 RGB 기법을 쓴다 RED,GREEN,BLUE => 색의 3원색 
+
+* CSS 속성
+
+>단위
+>색상
+>가시속성
+-display
+block : 
+-none이라는 속성의 반대의 의미를 가지고 있는 속성
+
+inline : 특정 요소가 보여질 수 있도록 하는 속성
+
+inline-block : 
+-특정 요소가 보여질 수 있도록 하는 속성
+-만약 inline-block 속성 안에 담겨있는 요소들이 하나의 행을 벗어나는 경우에는 block처럼 독립적으로 사용
+만약 inline-block 속성 안에 담겨있는 요소들이 하나의 행 안에서 소화될 수 있는 경우에는 inline처럼 같이 한 행을 공유해서 사용
+
+>inline vs inline-block
+1) 너비, 높이 값을 적용받을 수 있는가
+2) 마진, 패딩 값을 어디까지 적용받을 수 있는가
+
+none : 특정 요소를 보이지 않도록 && 공간을 없애는 속성
+
+-visibility : 공간을 유지한 상태로 보이지 않게 하는 속성
+>박스 속성
+-margin : 특정 요소 바깥 공간(*여백)을 얼만큼 부여할 것 인가에 대한 스타일 속성
+-padding : 특정 요소 내부 공간(*여백)을 얼만큼 부여할 것 인가에 대한 스타일 속성
+-box-sizing
+>테두리 = border  속성
+>배경속성 => background
+>폰트속성 => 
+font-size
+font-family
+font-style
+font-weight
+line-height
+
+
+* Responsive 개념
+    - flex
+    -grid
+* CSS 애니메이션
+
