@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #box {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 200px;
+        color: #fff;
+        /* animation-name: circle;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; */
+
+        animation: circle 2s linear none infinite alternate;
+        &:hover {
+          animation-play-state: paused;
+        }
+        h1 {
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      @keyframes circle {
+        from {
+          left: 0;
+          transform: rotate(0deg);
+        }
+        50% {
+          left: 500px;
+        }
+        to {
+          left: 500px;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Rotation</h1>
+    </div>
+  </body>
+</html>

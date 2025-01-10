@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+          width: 200px;
+          height: 200px;
+          background: #ccc;
+          perspective: 400px;
+          .box {
+            width: 100%;
+            height: 100%;
+            background: royalblue;
+            opacity: 0.4;
+            animation: rotation 5s linear none infinite;
+          }
+        }
+      }
+      @keyframes rotation {
+        from {
+          transform: translate3d(0, 0, 0) rotateX(0deg);
+        }
+        to {
+          transform: translate3d(0, 0, 0) rotateX(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">BOX</div>
+    </div>
+  </body>
+</html>
