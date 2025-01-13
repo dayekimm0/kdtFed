@@ -45,3 +45,41 @@ transition-duration :얼마의 시간동안 상태변화를 진행되도록 할 
 transition-delay: 얼마의 지연 후 상태변화를 진행하게 할 것인가
 transition-timing-function: 어떤 가.감속을 적용할 것인가
 transition-property : 어떤 속성 요소에 상태 변화를 적용할 것인가
+
+rotation 
+29프레임
+1초영상 - 30개의 정지된 스틸이미지로 완성
+
+gsap, threejs, anime
+-화면에 어떤 인터랙티브하며, 크리에이티브한 요소를 창작해서 넣는 작업 ? 정답 ?
+
+animation-name : keyframes를 활용해서 정의한 애니메이션 이름을 입력
+animation-duration : 실제 실행하고자 하는 애니메이션을 얼마의 시간동안 실행
+animation-timing-function : 구현되는 애니메이션의 가속도를 어떻게 설정
+animation-iteration-count : 애니메이션의 반복 횟수
+animation-direction : 애니메이션의 진행 방향(default = 일방통행 //반대로도 실행)
+animation-play-state : 애니메이션의 실행 상태를 제어할 때 사용
+animation-delay : 얼마의 시간 이후에 애니메이션을 실행시킬 것인가
+
+transform : 변환
+
+html을 통해서 만든 요소(element)들의 형태 || 위치를 변환시킬 때 사용
+
+1. 각도
+2. 크기
+3. 기울기
+4. 위치
+
+=> x,y, "z"
+
+perspective = 관점 // 원근법
+=> 사진 촬영때
+=> 2D요소를 하나의 장면으로 담아주는 기계
+=> 가까이 있는 사람 vs 멀리있는 사람 => 크게 vs 작게
+
+=> CSS 사용자가 모니터를 바라보는 상황
+상대적으로 사용자에게 가깝게 느껴지도록 하는 속성 → 위치속성 z-index 값이 크면 클수록 가까워짐
+*perspective
+=> 기본적으로 3d값을 가지고 있는 요소들의 z값의 defult는 0에서 시작
+=> perspective의 값이 클수록 해당 요소를 바라보는 간격이 커진다. 라고 이해 해야 함
+
