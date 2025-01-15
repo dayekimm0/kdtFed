@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .layout {
+        width: 500px;
+        border: 5px solid green;
+        .parent {
+          display: flex;
+          div {
+            height: 200px;
+            background: crimson;
+            margin: 5px;
+            &.child1 {
+              flex: 1 1 100px;
+            }
+            &.child2 {
+              flex: 1 2 200px;
+            }
+            &.child3 {
+              flex: 1 1 100px;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+      </div>
+    </div>
+  </body>
+</html>

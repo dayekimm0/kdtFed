@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        border: 5px solid green;
+        display: flex;
+        div {
+          width: 200px;
+          height: 200px;
+          background: crimson;
+          margin: 5px;
+          &.child1 {
+            flex-grow: 1;
+          }
+          &.child2 {
+            flex-grow: 2;
+          }
+          &.child3 {
+            flex-grow: 3;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="parent">
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+    </main>
+  </body>
+</html>
