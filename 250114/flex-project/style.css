@@ -1,0 +1,138 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset */
+@import url("./styles/reset.css");
+
+/* variables */
+@import url("./styles/variables.css");
+
+/* common */
+body {
+  width: 100%;
+  height: 3500px;
+  font-size: 16px;
+  font-family: var(--montseratt-font-family);
+}
+.inner {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+/* contents */
+header {
+  width: 100%;
+  position: fixed;
+  transition: all 0.3s;
+  .banner {
+    width: 100%;
+    height: 40px;
+    background: var(--main-dark-color);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    .lnb {
+      width: 1300px;
+      margin: 0 auto;
+      color: var(--main-light-color);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      a {
+        color: var(--lnb-font-color);
+        em {
+          color: var(--em-font-color +);
+        }
+      }
+    }
+  }
+  nav {
+    width: 1300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .gnb {
+      display: flex;
+      gap: 20px;
+      li > a {
+        color: var(--main-light-color);
+        transition: color 0.3s;
+        &:hover {
+          color: var(--hover-font-color);
+        }
+      }
+    }
+  }
+  &.active {
+    background: var(--main-light-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    .banner {
+      height: 0;
+      overflow: hidden;
+    }
+    nav {
+      .gnb {
+        li > a {
+          color: var(--main-dark-color);
+        }
+      }
+    }
+  }
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/intro.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  .heading {
+    text-align: center;
+    color: var(--main-light-color);
+    h1 {
+      font-size: 4.11rem;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 1.29rem;
+      line-height: 1.5rem;
+      padding: 0 150px;
+    }
+  }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  padding: 150px 0;
+  div {
+    padding: 30px;
+    &.desc {
+      flex: 3;
+      text-align: center;
+      h2 {
+        font-size: 1.76rem;
+      }
+      p {
+        font-size: 0.94rem;
+        line-height: 1.7rem;
+        margin: 30px 0;
+      }
+      a {
+        color: var(--btn-font-color);
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &.photo {
+      flex: 2;
+      img {
+        width: 100%;
+        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+      }
+    }
+  }
+}
