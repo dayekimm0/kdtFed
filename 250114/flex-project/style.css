@@ -12,9 +12,11 @@ body {
   width: 100%;
   font-size: 16px;
   font-family: var(--montseratt-font-family);
+  overflow-x: hidden;
 }
 .inner {
   width: 1300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .btn-explore {
@@ -89,10 +91,14 @@ header {
       }
     }
   }
+  .trigger {
+    display: none;
+  }
 }
 
 .intro {
   width: 100%;
+  min-width: 1300px;
   height: 100vh;
   background: url("./images/intro.jpg") center/cover no-repeat;
   display: flex;
@@ -148,6 +154,8 @@ header {
 }
 
 .ranking {
+  width: 100%;
+  min-width: 1300px;
   background: var(--ranking-bg-color);
   .ranking-content {
     padding: 100px 0;
@@ -253,6 +261,7 @@ header {
 
 .callaction {
   width: 100%;
+  min-width: 1300px;
   height: 450px;
   background: linear-gradient(
       to right,
@@ -365,5 +374,92 @@ header {
       display: inline-block;
       margin-top: 20px;
     }
+  }
+}
+
+.festival {
+  width: 100%;
+  min-width: 1300px;
+  height: 270px;
+  background: var(--hover-font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .festival-heading {
+    text-align: center;
+    h3 {
+      color: var(--main-light-color);
+      font-size: 1.52rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      span {
+        font-weight: 500;
+      }
+    }
+    .btns a {
+      display: inline-block;
+      width: 200px;
+      margin: 5px;
+      padding: 6px;
+      font-size: 0.94rem;
+      font-weight: 400;
+      border-radius: 5px;
+      &:nth-child(1) {
+        background: var(--btn-mexico-color);
+        color: var(--main-light-color);
+      }
+      &:nth-child(2) {
+        background: var(--btn-barcelona-color);
+        color: var(--hover-font-color);
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  min-width: 1300px;
+  background: var(--main-dark-color);
+  padding: 30px 0;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    ul {
+      text-align: center;
+      li {
+        font-size: 0.94rem;
+        margin-bottom: 10px;
+        color: var(--main-light-color);
+        &:first-child {
+          font-weight: 500;
+          color: var(--btn-font-color);
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.gototop {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #87ceeb, #c1e4f2);
+  color: var(--main-light-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  position: fixed;
+  right: 20px;
+  bottom: -20px;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    opacity: 1;
+    bottom: 20px;
   }
 }
