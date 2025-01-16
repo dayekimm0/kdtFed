@@ -53,7 +53,7 @@ header {
       a {
         color: var(--lnb-font-color);
         em {
-          color: var(--em-font-color +);
+          color: var(--em-font-color);
         }
       }
     }
