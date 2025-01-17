@@ -1,0 +1,38 @@
+250114
+
+* flex :
+
+flexible한 style을 기존 css 스타일 속성보다 쉽고, 효율적으로 적용하도록 하기 위해서 고안된 스타일 프레임 요소
+위치 속성을 적용하고 싶은 대상의 부모 요소에게 항상 &반드시 display: flex
+
+display : flex 라는 위치 속성을 부여하는 순간, 자동으로 중심축 & 교차축이 생성
+flex라는 위치 속성을 부여하는 순간, 부모 밑에 모든 자식 요소들이 가로로 한 줄 정렬
+
+중심축 & 교차축 :
+-중심축 가로 flex-diretion: row // column *row
+-교차축 세로 column
+중심축 정렬 : justify-content:center  // flex-start  // flex-end // *strech
+space-around // space-evenly
+교차축 정렬 : align-items:center
+align-content:자식요소들을 하나의 그룹으로 인식한 후 교차정렬을 실행시킴 
+:center  // start  // end
+
+레이아웃 정렬
+
+
+
+flex-wrap: wrap
+
+부모요소 아래 자식 요소들의 width 너비값을 보장하고자 할때
+*nowrap - 기본 디폴트값
+flex-flow:flex-direction + flex-wrap
+>상기 두가지의 요소를 한번에 사용할 수 있는 축약
+
+flex-grow : 부모 요소가 가지고 있는 전체 너비 값을 기준으로 그 밑에 있는 자식 요소들의 너비를 몇 분의 몇으로 (1/n)로 정의해서 적용하고 싶은 경우에 사용
+flex-shrink :  부모요소가 가지고 있는 전체 너비값을 기준으로 그 밑에 있는 자식 요소들의 너비의 줄임 비율을 적용하고 싶은 경우
+flex-basis : 부모요소 아래있는 자식요소들의 기본 너비값을 어떻게 보장하고자 할지 결정할때 사용 width와 거의 동일
+
+가상클래스
+>평상시에는 아무런 영향을 미치지 않다가
+>>특정 이벤트 조건이 부합되면 그때부터 해당 클래스 적용
+
