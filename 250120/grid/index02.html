@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        border: 5px solid #000;
+        background: lightcyan;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-content: space-between;
+        grid-gap: 10px;
+        height: 300px;
+        div {
+          background: darkorange;
+          color: #fff;
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        height: 300px;
+        div {
+          border: 1px solid #000;
+          background: dodgerblue;
+          &:nth-child(1) {
+            background: crimson;
+            grid-column: 1 / span 2;
+            grid-row: 1;
+          }
+          &:nth-child(2) {
+            background: yellowgreen;
+            grid-column-start: 3;
+            grid-row: 1 / span 2;
+          }
+          &:nth-child(5) {
+            background: violet;
+            grid-row: 3;
+            grid-column: 1 / span 3;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>
