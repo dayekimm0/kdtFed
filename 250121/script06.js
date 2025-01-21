@@ -57,13 +57,38 @@
 // };
 // obj1.outer();
 
-const obj = {
+// const obj = {
+//   outer: function () {
+//     console.log(this);
+//     const innerFunc = () => {
+//       console.log(this);
+//     };
+//     innerFunc();
+//   },
+// };
+// obj.outer();
+// const arr = [1, 2, 3, 4];
+
+// arr.forEach(function (num) {
+//   console.log(this, num);
+// });
+
+// setTimeout(function () {
+//   console.log(this);
+// }, 300);
+
+// document.body.innerHTML += '<button id="a">클릭</button>';
+// document.body.querySelector("#a").addEventListener("click", function () {
+//   console.log(this);
+// });
+const obj1 = {
   outer: function () {
     console.log(this);
-    const innerFunc = () => {
+    const innerFunc1 = function () {
       console.log(this);
     };
-    innerFunc();
+    innerFunc1();
   },
 };
-obj.outer();
+
+obj1.outer();
