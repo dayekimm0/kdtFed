@@ -41,7 +41,7 @@
 
 자바스크립트 코드가 작성 혹은 생성되는 순간 => 컴퓨터 메모리 공간 => 객체 생성 => 실행 컨텍스트 = execution context
 
-execution context : 개발자가 현재 작성 혹은 생성 변수(식별자)가 어떤 것이 있는지,
+5. execution context : 개발자가 현재 작성 혹은 생성 변수(식별자)가 어떤 것이 있는지,
 실행시켜야 하는 함수는 무엇인지 등등의 정보를 저장해놓고 있음!
 
 execution context => 어떤 코드를 먼저 실행해야하는가에 대한 우선순위를 결정하기 위한 목적
@@ -50,21 +50,21 @@ execution context => 어떤 코드를 먼저 실행해야하는가에 대한 우
 컴퓨터 공간 > stack => 쌓다 // heap
 
 call stack : 자바스크립트 명령문을 처리하는 공간
-VariableEnvironment : 환경변수 // 현재 실행 컨텍스트 내 변수명, 함수 정보, 실행 컨텍스트 내
+1) VariableEnvironment : 환경변수 // 현재 실행 컨텍스트 내 변수명, 함수 정보, 실행 컨텍스트 내
 특정함수가 호출 혹은 실행되는 순간 해당 함수를 스냅샷의 형태로 저장
 
 Snapshot : 일시정지 사진
 Lexical : 사전적인 = "사전"답사
 
-LexicalEnvironment : 초기에는 VariableEnvironment와 동일한 값으로 시작하지만,
+2) LexicalEnvironment : 초기에는 VariableEnvironment와 동일한 값으로 시작하지만,
 특정함수를 호출하면 해당 함수가 실시간 처리를 하고 있는 상태를 바로 반영해줌
 
-EnvironmentRecord : 현재 실행하고자 하는 코드들 내부에 저장되어 있는 정보값을 가지고 있음
+> EnvironmentRecord : 현재 실행하고자 하는 코드들 내부에 저장되어 있는 정보값을 가지고 있음
 
-outer-EnvironmentReference : 현재 실행하고자 하는 코드들이 외부에 영향을 받고 있는지, 받고있다면
+> outer-EnvironmentReference : 현재 실행하고자 하는 코드들이 외부에 영향을 받고 있는지, 받고있다면
 누구의 영향을 받는지를 확인할 수 있는 정보값을 가지고 있음
 
-ThisBinding : 현재 변수 || 식별자가 가리켜야 하는 대상 객체가 누구인지에 대한 정보값을 가지고 있음
+3) ThisBinding : 현재 변수 || 식별자가 가리켜야 하는 대상 객체가 누구인지에 대한 정보값을 가지고 있음
 
 호이스팅 Hoisting -> 무언가를 끌어올리다
 
