@@ -1,0 +1,21 @@
+1. 변수
+
+2. 자료형
+
+3. 형 변환
+
+4. 연산자
+
+5. 조건문
+if문
+if ~ else문
+else if문
+switch문
+삼항조건 연산자
+
+//break문 // continue문
+
+6. 반복문
+for문
+forEach문
+for ~ of문
