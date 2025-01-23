@@ -1,0 +1,140 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+/* reset */
+@import url("./styles/reset.css");
+/* variables */
+@import url("./styles/variables.css");
+
+/* common */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--alegreya-font-family);
+}
+
+/* contents */
+main {
+  width: 100%;
+  height: 100vh;
+  background: var(--sub-bg-color);
+  display: flex;
+  header {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    padding: 10vh 5vw;
+    h1 {
+      text-align: center;
+      font-size: 0;
+      color: var(--main-light-color);
+      font-family: var(--alegreya-font-family);
+      i {
+        font-size: 7rem;
+        margin-bottom: 15px;
+      }
+      span {
+        font: normal 2.6rem/1 "arial";
+      }
+    }
+    address {
+      color: var(--sub-text-color);
+      font: normal 1.4rem/1.2 "arial";
+      text-align: center;
+    }
+  }
+  section {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding-top: 140px;
+    article {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 70px 40px 100px;
+      opacity: 0.6;
+      z-index: 1;
+      transition: flex 1s, opacity 1s;
+      cursor: pointer;
+      &::before {
+        content: "";
+        width: 80%;
+        height: 95%;
+        background: var(--pannel-bg-color);
+        position: absolute;
+        top: 0;
+        left: -200px;
+        opacity: 0;
+        transition: all 1s;
+      }
+      .inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        position: relative;
+        .txt {
+          width: 100%;
+          transition: all 0.5s;
+          h2 {
+            color: var(--main-light-color);
+            font: normal 2rem/1 var(--alegreya-font-family);
+            margin-bottom: 40px;
+            padding-top: 70px;
+            transition: all 1s;
+            &::after {
+              content: "";
+              width: 40px;
+              height: 2px;
+              background: var(--text-bottom-line);
+              display: block;
+              margin-top: 20px;
+              transition: all 1.5s;
+            }
+          }
+          p {
+            color: var(--info-text-color);
+            font: normal 1.6rem/1.4 "arial";
+          }
+        }
+        figure {
+          width: 100%;
+          height: 15vh;
+          background: var(--text-bottom-line);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          filter: saturate(10%);
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    ul {
+      display: flex;
+      gap: 30px;
+      li {
+        a {
+          font-size: 2.4rem;
+          color: var(--nav-text-color);
+        }
+      }
+    }
+  }
+}
