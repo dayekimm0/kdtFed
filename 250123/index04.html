@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script04.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 500px;
+        height: 200px;
+        margin: 30px auto;
+        padding: 15px;
+        border: 2px solid #000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .out {
+          width: 230px;
+          height: 180px;
+          background: #d6edfc;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          .in {
+            width: 60%;
+            height: 60%;
+            background: #fc0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="out overout">
+        <p>move your mouseover</p>
+        <div class="in overout">
+          <p>move your mouse</p>
+          <p>0</p>
+        </div>
+        <p>0</p>
+      </div>
+
+      <div class="out enterleave">
+        <p>move your mouseenter</p>
+        <div class="in enterleave">
+          <p>move your mouse</p>
+          <p>0</p>
+        </div>
+        <p>0</p>
+      </div>
+    </div>
+  </body>
+</html>
