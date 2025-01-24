@@ -1,0 +1,39 @@
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+.btn {
+  width: 200px;
+  height: 100%;
+  padding: 7px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $main-font-size;
+
+  .order {
+    @extend .btn;
+    background: $main-red-color;
+    color: $main-light-color;
+  }
+  .add {
+    @extend .btn;
+    background: $main-blue-color;
+    color: $main-light-color;
+  }
+  .checkout {
+    @extend .btn;
+    background: $main-green-color;
+    color: $main-light-color;
+  }
+}

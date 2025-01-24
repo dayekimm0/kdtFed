@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn, body .checkout, body .add, body .order {
+  width: 200px;
+  height: 100%;
+  padding: 7px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+body .order {
+  background: crimson;
+  color: #fff;
+}
+body .add {
+  background: royalblue;
+  color: #fff;
+}
+body .checkout {
+  background: green;
+  color: #fff;
+}
