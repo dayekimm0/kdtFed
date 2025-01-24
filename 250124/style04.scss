@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+$color: (
+  font-primary: #2d3436,
+  font-secondary: #636e72,
+  font-focus: #d63031,
+  bg-primary: #dfe6e9,
+  bg-secondary: #b2bec3,
+);
+$fontSize: (
+  large: $main-font-size * 3,
+  medium: $main-font-size * 2,
+  normal: $main-font-size,
+  small: $main-font-size / 2,
+);
+
+$fontFamily: (
+  kor: "Noto Sans KR",
+  eng: "Montserrat",
+);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $main-font-size;
+
+  background: map-get($color, bg-primary);
+  font-family: map-get($fontFamily, eng);
+  .frame {
+    h1 {
+      color: map-get($color, font-focus);
+      font-size: map-get($fontSize, large);
+    }
+    p {
+      font-size: map-get($fontSize, medium);
+    }
+  }
+}
