@@ -13,8 +13,18 @@
 /* variables */
 @import "./styles/variables.scss";
 
+/* common */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 h1 {
   background: map-get($map: $color, $key: main-dark-color);
   color: map-get($map: $color, $key: main-light-color);
   font-family: map-get($map: $fontFamily, $key: over-font-family);
+  font-size: 6rem;
 }
