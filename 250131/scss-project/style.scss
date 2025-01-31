@@ -20,11 +20,89 @@ html {
 
 body {
   font-size: 1.6rem;
+  height: 100vh;
+  background: map-get($map: $color, $key: main-light-color);
+  color: map-get($map: $color, $key: main-font-color);
+  font-family: map-get($map: $fontFamily, $key: mont-font-family);
 }
 
-h1 {
-  background: map-get($map: $color, $key: main-dark-color);
-  color: map-get($map: $color, $key: main-light-color);
-  font-family: map-get($map: $fontFamily, $key: over-font-family);
-  font-size: 6rem;
+.cd-section {
+  height: 100vh;
+  & > div {
+    height: 100%;
+    position: relative;
+    .content {
+      background: map-get($map: $color, $key: content-bg-color);
+      width: calc(100% - 40px);
+      height: calc(100% - 80px);
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      overflow: hidden;
+    }
+  }
+}
+
+/* content-item */
+
+/* ==== awards ==== */
+.awards-inner {
+  display: flex;
+  height: 100%;
+  border: 1px solid map-get($map: $color, $key: content-bg-color);
+
+  .about-awards {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: map-get($map: $color, $key: awards-bg-color);
+    color: map-get($map: $color, $key: main-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .about-heading {
+      padding: 120px;
+      h2 {
+        font-size: 3.6rem;
+      }
+      .bar {
+        width: 50px;
+        height: 4px;
+        border: none;
+        background: map-get($map: $color, $key: vars-bg-color);
+        margin: 30px auto;
+      }
+      p {
+        color: map-get($map: $color, $key: sub-font-color);
+        font-size: 1.8rem;
+        line-height: 3rem;
+        margin-bottom: 30px;
+      }
+      .view-awards {
+        display: inline-block;
+        border: 1px solid map-get($map: $color, $key: button-bg-color);
+        color: map-get($map: $color, $key: button-bg-color);
+        padding: 12px 28px;
+        border-radius: 30px;
+        transition: all 0.5s;
+        &:hover {
+          background: map-get($map: $color, $key: button-sub-color);
+          color: map-get($map: $color, $key: main-light-color);
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  .victory-jump {
+    background: map-get($map: $color, $key: main-light-color);
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
