@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+body h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+body #profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body #profile img {
+  width: 150px;
+  border-radius: 20px;
+}
+body #profile #desc {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body #profile #desc p {
+  font-size: 1.4rem;
+}
+body #profile #desc p.active {
+  background: #ff0;
+  color: #1e90ff;
+}

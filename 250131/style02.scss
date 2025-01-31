@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.dark {
+    background: #222;
+    color: #eee;
+  }
+  #toggle-btn {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  }
+  #contents {
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    padding: 30px;
+    line-height: 200%;
+  }
+}

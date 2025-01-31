@@ -1,0 +1,20 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset */
+@import "./styles/reset.scss";
+
+/* variables */
+@import "./styles/variables.scss";
+
+h1 {
+  background: map-get($map: $color, $key: main-dark-color);
+  color: map-get($map: $color, $key: main-light-color);
+  font-family: map-get($map: $fontFamily, $key: over-font-family);
+}
