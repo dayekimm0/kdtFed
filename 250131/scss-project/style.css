@@ -114,3 +114,146 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+/* ==== location ==== */
+.location-inner {
+  height: 100%;
+  background: url("./images/background-location.jpg") center/cover no-repeat;
+  position: relative;
+}
+.location-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.location-inner .feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #bbb;
+  display: flex;
+  gap: 100px;
+}
+.location-inner .feature .office {
+  width: 60%;
+}
+.location-inner .feature .office b {
+  font-weight: normal;
+}
+.location-inner .feature .office h2 {
+  color: #1db1f0;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.location-inner .feature .office p {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+.location-inner .feature .office span {
+  color: #fff;
+  display: inline-block;
+  margin-top: 8px;
+}
+.location-inner .feature .office .customer {
+  margin-top: 40px;
+}
+.location-inner .feature .service {
+  width: 40%;
+}
+.location-inner .feature .service .service-item {
+  margin-bottom: 40px;
+}
+.location-inner .feature .service .service-item i {
+  color: #1db1f0;
+  font-size: 40px;
+}
+.location-inner .feature .service .service-item h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 8px 0 4px;
+}
+
+/* ==== contact ==== */
+.contact-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.contact-inner .contact-feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.contact-inner .contact-feature > div {
+  width: 50%;
+  padding: 20px;
+}
+.contact-inner .contact-feature .contact-form h3 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+.contact-inner .contact-feature .contact-form .send-box label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 30px 0px 10px;
+}
+.contact-inner .contact-feature .contact-form .send-box label span {
+  font-weight: normal;
+  color: #dc143c;
+}
+.contact-inner .contact-feature .contact-form .send-box input,
+.contact-inner .contact-feature .contact-form .send-box textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.contact-inner .contact-feature .contact-form .send-box input:focus,
+.contact-inner .contact-feature .contact-form .send-box textarea:focus {
+  outline: none;
+  background: #eee;
+}
+.contact-inner .contact-feature .contact-form .send-box input:hover,
+.contact-inner .contact-feature .contact-form .send-box textarea:hover {
+  border: 1px solid #0088cc;
+  box-shadow: 0, 0, 5px #0088cc;
+}
+.contact-inner .contact-feature .contact-form .send-box input[type=submit] {
+  background: #0088cc;
+  color: #fff;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact-inner .contact-feature .contact-form .send-box input[type=submit]:hover {
+  background: #000;
+  border: 1px solid #000;
+  box-shadow: none;
+}
+.contact-inner .contact-feature .contact-info h4 {
+  font-weight: normal;
+  font-size: 2.6rem;
+  margin: 20px 0 10px;
+}
+.contact-inner .contact-feature .contact-info ul li {
+  line-height: 2.6rem;
+}
+.contact-inner .contact-feature .contact-info p {
+  line-height: 2.6rem;
+}

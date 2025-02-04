@@ -106,3 +106,153 @@ body {
     }
   }
 }
+
+/* ==== location ==== */
+.location-inner {
+  height: 100%;
+  background: url("./images/background-location.jpg") center/cover no-repeat;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.8);
+  }
+  .feature {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: map-get($map: $color, $key: button-bg-color);
+    display: flex;
+    gap: 100px;
+    .office {
+      width: 60%;
+      b {
+        font-weight: normal;
+      }
+      h2 {
+        color: map-get($map: $color, $key: sub-title-color);
+        font-weight: 500;
+        margin-top: 5px;
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+      }
+      span {
+        color: map-get($map: $color, $key: main-light-color);
+        display: inline-block;
+        margin-top: 8px;
+      }
+      .customer {
+        margin-top: 40px;
+      }
+    }
+    .service {
+      width: 40%;
+      .service-item {
+        margin-bottom: 40px;
+        i {
+          color: map-get($map: $color, $key: sub-title-color);
+          font-size: 40px;
+        }
+        h3 {
+          color: map-get($map: $color, $key: main-light-color);
+          font-size: 2.4rem;
+          margin: 8px 0 4px;
+        }
+      }
+    }
+  }
+}
+
+/* ==== contact ==== */
+.contact-inner {
+  width: 100%;
+  height: 100%;
+  background-color: map-get($map: $color, $key: main-light-color);
+  border: 1px solid map-get($map: $color, $key: content-bg-color);
+  .contact-feature {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    & > div {
+      width: 50%;
+      padding: 20px;
+    }
+    .contact-form {
+      h3 {
+        font-size: 3rem;
+        font-weight: normal;
+        margin-bottom: 6px;
+      }
+      .send-box {
+        label {
+          display: block;
+          font-weight: bold;
+          font-size: 1.6rem;
+          margin: 30px 0px 10px;
+          span {
+            font-weight: normal;
+            color: map-get($map: $color, $key: vars-bg-color);
+          }
+        }
+        input,
+        textarea {
+          width: 100%;
+
+          border: 1px solid map-get($map: $color, $key: input-border-color);
+          border-radius: 3px;
+          padding: 10px;
+          transition: all 0.3s;
+          &:focus {
+            outline: none;
+            background: map-get($map: $color, $key: input-focus-color);
+          }
+          &:hover {
+            border: 1px solid map-get($map: $color, $key: input-hover-color);
+            box-shadow: 0, 0, 5px map-get($map: $color, $key: input-hover-color);
+          }
+        }
+        input[type="submit"] {
+          background: map-get($map: $color, $key: input-hover-color);
+          color: map-get($map: $color, $key: main-light-color);
+          margin-top: 10px;
+          padding: 12px 20px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background: map-get($map: $color, $key: main-dark-color);
+            border: 1px solid map-get($map: $color, $key: main-dark-color);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .contact-info {
+      h4 {
+        font-weight: normal;
+        font-size: 2.6rem;
+        margin: 20px 0 10px;
+      }
+      ul {
+        li {
+          line-height: 2.6rem;
+        }
+      }
+      p {
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
