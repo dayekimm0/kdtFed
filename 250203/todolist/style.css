@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 1.6rem;
+}
+
+form {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+form h2 {
+  color: #3498db;
+}
+form #user-input {
+  margin: 10px 0 24px;
+}
+form #user-input input {
+  padding: 10px;
+}
+form #user-input input:nth-child(1) {
+  border: none;
+  border-bottom: 1px solid #3498db;
+}
+form #user-input input:nth-child(1)::-moz-placeholder {
+  color: #3498db;
+  font-size: 1.2rem;
+  opacity: 1;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+form #user-input input:nth-child(1)::placeholder {
+  color: #3498db;
+  font-size: 1.2rem;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+form #user-input input:nth-child(1):focus {
+  outline: none;
+}
+form #user-input input:nth-child(1):focus::-moz-placeholder {
+  opacity: 0;
+}
+form #user-input input:nth-child(1):focus::placeholder {
+  opacity: 0;
+}
+form #user-input input:nth-child(2) {
+  width: 80px;
+  background: #3498db;
+  color: #fff;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+form #user-input input:nth-child(2):hover {
+  background: #fff;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+form ul li {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  padding: 0 16px 8px;
+  border-bottom: 1px dotted #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form ul li button {
+  border: none;
+  border-radius: 8px;
+  padding: 4px 10px;
+  background: #3498db;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
