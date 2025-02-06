@@ -14,6 +14,77 @@
     <title>기분 좋은 친구, Cyworld</title>
   </head>
   <body>
-    <h1>hello</h1>
+    <main id="container">
+      <div id="outer">
+        <div id="inner">
+          <section id="inner-left">
+            <div class="inner-left-header">
+              <div class="today">
+                <span>TODAY</span>
+                <span class="zero">0</span>
+                <span>TOTAL</span>
+                <span>1234</span>
+              </div>
+            </div>
+            <div class="inner-left-body">
+              <div class="left-body-title">
+                <div class="title-img"></div>
+                <div class="title-line"></div>
+              </div>
+              <div class="left-body-profile">
+                <div class="profile-detail">
+                  <i class="fas fa-user-astronaut"></i>
+                  <span>name</span>
+                </div>
+                <div class="profile-detail">
+                  <i class="fas fa-phone-volume"></i>
+                  <span>Tel</span>
+                </div>
+                <div class="profile-detail">
+                  <i class="fas fa-at"></i>
+                  <span>email</span>
+                </div>
+                <div class="profile-detail">
+                  <i class="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </div>
+              </div>
+              <div class="left-body-footer">
+                <div class="footer-feel">
+                  <div class="feel-title">오늘의 기분👀</div>
+                  <form name="feel-list" action="#" method="post">
+                    <select name="emotion" id="emotion">
+                      <option disabled selected>
+                        오늘의 기분을 선택하세요
+                      </option>
+                      <option value="happy">오나전 째져!😍</option>
+                      <option value="sad">우울모드 ON😢</option>
+                      <option value="angry">지대 짱나ㄱㅡ</option>
+                      <option value="annoy">걸리면 쥭는닷👿</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="inner-right">
+            <div class="inner-right-header">
+              <div class="header-title">♡+◟(● ̇▾ ̇●)◞+♡ 🔉: ▁ ▂ ▃ ▄ ▅ ▆</div>
+              <div class="header-privacy">
+                사생활보호설정<i class="fas fa-caret-right"></i>
+              </div>
+            </div>
+            <div class="inner-right-body">
+              <iframe id="contentFrame" src="./home.html"></iframe>
+            </div>
+          </section>
+          <section id="navigation">
+            <div id="menuHome" class="navigation-item">홈</div>
+            <div id="menuGame" class="navigation-item">게임</div>
+            <div id="menuJukebox" class="navigation-item">쥬크박스</div>
+          </section>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

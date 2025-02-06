@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* mixin */
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-size: 1.6rem;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#wrapper .contents-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#wrapper .contents-title .title {
+  color: #55b2e4;
+  font: bold 1.4rem/1 "arial";
+}
+#wrapper .contents-title .subtitle {
+  font: normal 1.4rem/1 "arial";
+}
+#wrapper .header-line {
+  width: 100%;
+  border-top: 1px solid #808080;
+  margin: 4px 0;
+}
+
+#wrapper-body {
+  width: 100%;
+  height: 270px;
+}
+#wrapper-body .contents-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#wrapper-body .contents-title .title {
+  color: #55b2e4;
+  font: bold 1.4rem/1 "arial";
+}
+#wrapper-body .contents-title .subtitle {
+  font: normal 1.4rem/1 "arial";
+}
+#wrapper-body .video {
+  width: 100%;
+  height: 240px;
+  background: url("https://i.pinimg.com/736x/e2/c6/84/e2c684e3616ef819d04809f8cdb811ba.jpg") center no-repeat;
+  margin-top: 10px;
+}
