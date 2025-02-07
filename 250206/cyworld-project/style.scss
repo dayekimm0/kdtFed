@@ -69,17 +69,29 @@ html {
         margin: 12px 0;
         border-top: 1px dotted map-get($map: $color, $key: dark);
       }
+      .todayis {
+        width: 156px;
+        padding: 4px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: map-get($map: $color, $key: theme);
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+      }
     }
     .left-body-profile {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
       .profile-detail {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        text-align: center;
         gap: 6px;
+        font-size: 1.4rem;
         cursor: pointer;
       }
     }
@@ -87,9 +99,15 @@ html {
       .footer-feel {
         display: flex;
         flex-direction: column;
-        gap: 6px;
         .feel-title {
+          width: 55px;
+          text-align: right;
           font-weight: bold;
+          font-size: 1.4rem;
+        }
+        .feel-list {
+          text-align: center;
+          justify-content: center;
         }
       }
     }
