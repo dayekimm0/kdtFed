@@ -1,0 +1,24 @@
+내장객체 => Window / Document
+
+날짜객체 (*new Date())
+
+수학객체 (*Math)
+
+일반객체 & 생성자 함수 & Class
+
+*jQuery Library
+
+1. jQuery 를 가장 먼저 설치
+- defer를 사용할 필요 없음
+
+1-1. 각각의 jQuery라이브러리를 사용할 때, CSS를 먼저 적용해서 설치하고, 그 다음에 script를 적용 및 설치하는 방식으로 사용
+
+2. page scroll effect
+
+3. slick slider
+
+4. feather light
+
+5. scrollTo
+
+6. custom JS
