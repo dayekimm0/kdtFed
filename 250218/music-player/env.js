@@ -1,0 +1,3 @@
+const API_UNSLPASH_KEY = "wVXwB9LohIWmjWHrGxcuErVtvWdwPT_E7NUWug5pCTY";
+
+export { API_UNSLPASH_KEY };

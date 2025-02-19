@@ -1,3 +1,12 @@
+const getImg = "https://api.unsplash.com/photos/random/?client_id=";
+
+fetch(getImg)
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => {
+    console.error("이미지 로드 중 오류 발생!", error);
+  });
+
 const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");
 const audios = frame.querySelectorAll("audio");
@@ -20,31 +29,59 @@ lists.forEach((list) => {
   i++;
 
   play.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.add("on");
+      .classList.contains("on");
+    if (isActive) {
+      const activePic = e.currentTarget
+        .closest("article")
+        .querySelector(".pic");
 
-    e.currentTarget.closest("article").querySelector("audio").play();
+      const activeAudio = e.currentTarget
+        .closest("article")
+        .querySelector(".audio");
+
+      activePic.classList.add("on");
+      activeAudio.play();
+
+      e.currentTarget.closest("article").querySelector("audio").play();
+
+      e.currentTarget
+        .closest("article")
+        .querySelector("audio")
+        .addEventListener("ended", () => {
+          activePic.classList.remove("on");
+        });
+    }
   });
 
   pause.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.remove("on");
+      .classList.contains("on");
+    if (isActive) {
+      e.currentTarget
+        .closest("article")
+        .querySelector(".pic")
+        .classList.remove("on");
 
-    e.currentTarget.closest("article").querySelector("audio").pause();
+      e.currentTarget.closest("article").querySelector("audio").pause();
+    }
   });
 
   load.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.add("on");
+      .classList.contains("on");
+    if (isActive) {
+      e.currentTarget
+        .closest("article")
+        .querySelector(".pic")
+        .classList.add("on");
 
-    e.currentTarget.closest("article").querySelector("audio").load();
-    e.currentTarget.closest("article").querySelector("audio").play();
+      e.currentTarget.closest("article").querySelector("audio").load();
+      e.currentTarget.closest("article").querySelector("audio").play();
+    }
   });
 });
 
