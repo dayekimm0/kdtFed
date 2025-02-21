@@ -13,6 +13,9 @@ body {
   align-items: center;
 }
 
+.center {
+  perspective: 700px;
+}
 .center .number-input {
   width: 380px;
   height: 200px;
@@ -22,6 +25,7 @@ body {
   align-items: center;
   border-radius: 38px;
   background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+  transition: all 0.3s;
 }
 .center .number-input .btn {
   width: 80px;

@@ -15,6 +15,7 @@ body {
 }
 
 .center {
+  perspective: 700px;
   .number-input {
     width: 380px;
     height: 200px;
@@ -29,6 +30,7 @@ body {
       #fdcbf1 1%,
       #e6dee9 100%
     );
+    transition: all 0.3s;
     .btn {
       width: 80px;
       height: 80px;
