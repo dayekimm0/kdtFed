@@ -1,14 +1,19 @@
-const productInfo = "./db.json";
+// const productInfo = "./db.json";
+// const productInfo =
+//   "https://raw.githubusercontent.com/dayekimm0/Array-project/refs/heads/main/db.json";
+const productInfo =
+  "https://my-json-server.typicode.com/dayekimm0/Array-project/data";
 
 const ul = document.querySelector("ul");
 
+// db.json
 fetch(productInfo)
   // json Data 찾아오기
   .then((response) => response.json())
   .then((data) => {
     let idCounter = Date.now();
     const products = {
-      data: data.data.map((item) => ({
+      data: data.map((item) => ({
         ...item,
         id: idCounter++,
       })),
@@ -51,7 +56,10 @@ fetch(productInfo)
       ul.appendChild(li);
 
       li.addEventListener("click", () => {
-        window.location.href = "product-detail.html";
+        const url = `product-detail.html?category=${encodeURIComponent(
+          product.category
+        )}&name=${encodeURIComponent(product.name)}`;
+        window.location.href = url;
       });
     };
 
@@ -64,7 +72,7 @@ fetch(productInfo)
 
     importData();
 
-    // 오름차순 정렬
+    // 오름차순정렬
     const asceButton = document.querySelector(".ascending");
     const sortAsce = (e) => {
       e.preventDefault();
@@ -77,9 +85,10 @@ fetch(productInfo)
         createItem(product);
       });
     };
+
     asceButton.addEventListener("click", sortAsce);
 
-    // 내림차순 정렬
+    // 내림차순정렬
     const descButton = document.querySelector(".decending");
     const sortDesc = (e) => {
       e.preventDefault();
@@ -95,6 +104,7 @@ fetch(productInfo)
     };
 
     descButton.addEventListener("click", sortDesc);
+
     // 최신순정렬
     const newlisting = document.querySelector(".newlisting");
     const sortNew = (e) => {
@@ -102,7 +112,9 @@ fetch(productInfo)
       const myProducts = products.data.sort((a, b) => {
         return b.id - a.id;
       });
+
       removeItems();
+
       myProducts.forEach((product) => {
         createItem(product);
       });
@@ -110,7 +122,7 @@ fetch(productInfo)
 
     newlisting.addEventListener("click", sortNew);
 
-    // 검색 이벤트
+    // 검색이벤트
     const searchBar = document.querySelector(".searchBar");
     searchBar.addEventListener("input", () => {
       const keyword = searchBar.value.toLowerCase();
@@ -128,8 +140,8 @@ fetch(productInfo)
       }
     });
 
-    // 셀렉트 & 옵션 이벤트
-    const selelct = document.querySelector("select");
+    // 셀렉트 & 옵션이벤트
+    const select = document.querySelector("select");
     const selectCategory = (e) => {
       const selectedIndex = e.target.options.selectedIndex;
       const value = e.target.options[selectedIndex].value;
@@ -142,13 +154,14 @@ fetch(productInfo)
         createItem(product);
       });
     };
-    Selection.addEventListener("change", selectCategory);
+
+    select.addEventListener("change", selectCategory);
   })
   .catch((error) => {
     console.error(error);
   });
 
-// channel talk
+// Channel Talk
 
 (function () {
   var w = window;
@@ -186,5 +199,5 @@ fetch(productInfo)
 })();
 
 ChannelIO("boot", {
-  pluginKey: "61a91d05-1d9f-4568-aec0-26fea74629d1",
+  pluginKey: "8f0f1a69-ac0d-4265-9f70-0ce18b8e2539",
 });
