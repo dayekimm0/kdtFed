@@ -1,0 +1,10 @@
+{
+  "name": "짱구",
+  "major": "컴퓨터공학",
+  "grade": 2,
+  "course": ["웹기초", "HTML", "JS", "CSS"],
+  "friends": {
+    "bf": "철수",
+    "gf": "이슬이누나"
+  }
+}
