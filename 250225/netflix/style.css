@@ -157,6 +157,7 @@ body {
   width: 900px;
   margin: 0 auto;
   margin-bottom: 30px;
+  overflow: hidden;
   position: relative;
 }
 .container .movie article h1 {
@@ -413,4 +414,147 @@ body {
   top: 20%;
   left: 8px;
   font-size: 1.4rem;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: auto;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay .modal-content {
+  width: 1000px;
+  position: relative;
+  border: 1px solid #f00;
+}
+.modal-overlay .modal-content .modal-top {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.modal-overlay .modal-content .modal-top .modal-photo {
+  width: 300px;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.modal-overlay .modal-content .modal-top .modal-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-overlay .modal-content .modal-top form {
+  width: 600px;
+}
+.modal-overlay .modal-content .modal-top form .modal-info {
+  width: 100%;
+}
+.modal-overlay .modal-content .modal-top form .modal-info h1 {
+  font-size: 4rem;
+  margin-bottom: 14px;
+}
+.modal-overlay .modal-content .modal-top form .modal-info div {
+  font-size: 1.6rem;
+}
+.modal-overlay .modal-content .modal-top form .modal-info div span {
+  display: inline-block;
+  margin-right: 4px;
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+.modal-overlay .modal-content .modal-top form .modal-info div span:last-child {
+  border-right: none;
+}
+.modal-overlay .modal-content .modal-top form .modal-button {
+  width: 100%;
+  margin: 20px 0;
+}
+.modal-overlay .modal-content .modal-top form .modal-button a {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  border-radius: 34px;
+  margin-right: 8px;
+  transition: border 0.3s, background 0.3s;
+}
+.modal-overlay .modal-content .modal-top form .modal-button a:hover {
+  border: 1px solid #dc143c;
+  background: #dc143c;
+}
+.modal-overlay .modal-content .modal-top form .modal-button a i {
+  margin-right: 10px;
+}
+.modal-overlay .modal-content .modal-top form .modal-desc {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.modal-overlay .modal-content .modal-top form .modal-desc p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.modal-overlay .modal-content .modal-top form input[type=submit] {
+  border: none;
+  border-radius: 34px;
+  background: #dc143c;
+  color: #fff;
+  padding: 8px 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-overlay .modal-content .modal-bottom .modal-detail {
+  width: 100%;
+  background: #dc143c;
+  padding: 10px;
+  border-radius: 20px 0 0 0;
+}
+.modal-overlay .modal-content .modal-bottom .modal-detail h1 {
+  font-size: 3rem;
+  margin-bottom: 14px;
+}
+.modal-overlay .modal-content .modal-bottom .modal-detail div {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.modal-overlay .modal-content .modal-bottom .modal-detail div span:first-child {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+.modal-overlay .modal-content .modal-bottom .modal-detail div span:last-child {
+  font-style: italic;
+  text-decoration: underline;
+}
+.modal-overlay .modal-content .modal-bottom .modal-poster {
+  width: 100%;
+  height: 500px;
+}
+.modal-overlay .modal-content .modal-bottom .modal-poster img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-overlay .modal-content .modal-bottom .modal-trailer {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0;
+  background: #fff;
+}
+.modal-overlay .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modal-overlay .modal-close i {
+  font-size: 3rem;
+  cursor: pointer;
 }

@@ -148,12 +148,57 @@ const getMovies = async () => {
 
     slider.style.transition = "none";
     updateSlider();
+
+    document.querySelector(rightArrowSelector).addEventListener("click", () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex += slideToShow;
+
+      if (currentIndex === slides.length) {
+        slider.style.transition = "all 0.5s";
+        updateSlider();
+        setTimeout(() => {
+          slider.style.transition = "none";
+          currentIndex = 0;
+          updateSlider();
+          isTransitioning = false;
+        }, 500);
+      } else {
+        slider.style.transition = "all 0.5s";
+        updateSlider();
+        setTimeout(() => {
+          isTransitioning = false;
+        });
+      }
+    });
+    document.querySelector(leftArrowSelector).addEventListener("click", () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex -= slideToShow;
+
+      if (currentIndex < 0) {
+        slider.style.transition = "all 0.5s";
+        updateSlider();
+        setTimeout(() => {
+          slider.style.transition = "none";
+          currentIndex = slides.length - slideToShow;
+          updateSlider();
+          isTransitioning = false;
+        }, 500);
+      } else {
+        slider.style.transition = "all 0.5s";
+        updateSlider();
+        setTimeout(() => {
+          isTransitioning = false;
+        });
+      }
+    });
   };
 
   initializeSlider(
     ".nowplaying ul",
-    "#nowPlayingRightArrow",
-    "#nowPlayingLeftArrow"
+    "#nowplayingRightArrow",
+    "#nowplayingLeftArrow"
   );
   initializeSlider(".upcoming ul", "#upcomingRightArrow", "#upcomingLeftArrow");
   initializeSlider(".toprated ul", "#topratedRightArrow", "#topratedLeftArrow");
