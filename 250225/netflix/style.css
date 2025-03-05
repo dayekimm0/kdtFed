@@ -150,11 +150,107 @@ body {
 }
 .container .movie {
   position: relative;
+  width: 100%;
+  margin-top: 100px;
+}
+.container .movie article {
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+}
+.container .movie article h1 {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+.container .movie article ul {
+  display: flex;
+  gap: 25px;
+  transition: all 0.5s;
+}
+.container .movie article ul li {
+  cursor: pointer;
+}
+.container .movie article ul li .moviePoster {
+  width: 160px;
+  height: 234px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.container .movie article ul li .moviePoster img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .movie article ul li .moviePoster span {
+  position: absolute;
+}
+.container .movie article ul li .moviePoster span:nth-of-type(1) {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  background: rgba(220, 20, 60, 0.7);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+}
+.container .movie article ul li .moviePoster span:nth-of-type(2) {
+  left: 10px;
+  bottom: 10px;
+  font-size: 2.4rem;
+  font-style: italic;
+  text-shadow: 0 0 6px white;
+}
+.container .movie article ul li .movieTitle {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .movie article ul li .movieDesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1rem;
+}
+.container .movie article ul li .movieDesc span:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.container .movie article .arrowBtn {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #dc143c;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.container .movie article .arrowBtn#nowplayingRightArrow, .container .movie article .arrowBtn#upcomingRightArrow, .container .movie article .arrowBtn#topratedRightArrow {
+  right: 0;
+}
+.container .movie article .arrowBtn#nowplayingLeftArrow, .container .movie article .arrowBtn#upcomingLeftArrow, .container .movie article .arrowBtn#topratedLeftArrow {
+  left: 0;
+}
+.container .movie article .arrowBtn:hover {
+  background: #fff;
+  color: #dc143c;
 }
 .container .faq {
   width: 100%;
   height: 100%;
-  margin-top: 300px;
 }
 .container .faq .faq-inner {
   width: 900px;
@@ -203,7 +299,7 @@ body {
 .container .faq .faq-inner .newsletter {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 .container .faq .faq-inner .newsletter p {
   font-size: 2rem;
