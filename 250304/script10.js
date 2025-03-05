@@ -29,10 +29,3 @@ const displaySubject = (subject) => {
   return `Hello, ${subject}`;
 };
 // whatYourFavorite().then(displaySubject).then(console.log);
-
-const init = () => {
-  const response = await whatYourFavorite();
-  const result = await displaySubject(response);
-  console.log(result);
-};
-init();
