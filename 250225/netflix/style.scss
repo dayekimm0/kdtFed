@@ -426,7 +426,6 @@ body {
   .modal-content {
     width: 1000px;
     position: relative;
-    border: 1px solid #f00;
     .modal-top {
       display: flex;
       gap: 20px;
@@ -540,8 +539,11 @@ body {
       .modal-trailer {
         width: 100%;
         height: 500px;
-        margin: 20px 0;
+        // margin: 20px 0;
         background: #fff;
+        iframe {
+          border: none;
+        }
       }
     }
   }

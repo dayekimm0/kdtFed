@@ -432,7 +432,6 @@ body {
 .modal-overlay .modal-content {
   width: 1000px;
   position: relative;
-  border: 1px solid #f00;
 }
 .modal-overlay .modal-content .modal-top {
   display: flex;
@@ -546,8 +545,10 @@ body {
 .modal-overlay .modal-content .modal-bottom .modal-trailer {
   width: 100%;
   height: 500px;
-  margin: 20px 0;
   background: #fff;
+}
+.modal-overlay .modal-content .modal-bottom .modal-trailer iframe {
+  border: none;
 }
 .modal-overlay .modal-close {
   position: absolute;
