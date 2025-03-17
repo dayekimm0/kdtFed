@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoDispatchContext } from "../App";
 
-const TodoItem = ({ content, createdDate, id, isDone, onUpdate, onDelete }) => {
+const TodoItem = ({ content, createDate, id, isDone }) => {
+  console.log(`${id} TodoItem 업데이트`);
+  const { onUpdate, onDelete } = useContext(TodoDispatchContext);
   const onChangeCheckbox = () => {
     onUpdate(id);
   };
+
   const onClickDelete = () => {
     onDelete(id);
   };
@@ -14,7 +18,7 @@ const TodoItem = ({ content, createdDate, id, isDone, onUpdate, onDelete }) => {
       </div>
       <div className="title_col">{content}</div>
       <div className="date_col">
-        {new Date(createdDate).toLocaleDateString()}
+        {new Date(createDate).toLocaleDateString()}
       </div>
       <div className="btn_col">
         <button onClick={onClickDelete}>삭제</button>
@@ -22,5 +26,5 @@ const TodoItem = ({ content, createdDate, id, isDone, onUpdate, onDelete }) => {
     </div>
   );
 };
-
-export default TodoItem;
+export default React.memo(TodoItem);
+// export default TodoItem;
