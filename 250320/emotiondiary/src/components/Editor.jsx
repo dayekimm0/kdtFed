@@ -70,7 +70,6 @@ const Editor = ({ initData, onSubmit }) => {
       });
     }
   }, [initData]);
-
   const handleChangeDate = (e) => {
     setState({
       ...state,
