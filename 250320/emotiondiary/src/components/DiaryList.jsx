@@ -42,11 +42,10 @@ const ListContents = styled.div``;
 
 const sortOptionList = [
   { value: "latest", name: "최신순" },
-  { value: "oldest", name: "오래된순" },
+  { value: "oldest", name: "오랜된순" },
 ];
 
 const DiaryList = ({ data }) => {
-  console.log(data);
   const [sortType, setSortType] = useState("latest");
   const [sortedData, setSortedData] = useState([]);
   const navigate = useNavigate();
@@ -71,8 +70,6 @@ const DiaryList = ({ data }) => {
   const onClickNew = () => {
     navigate("/new");
   };
-
-  console.log(sortedData);
   return (
     <>
       <DiaryContents>

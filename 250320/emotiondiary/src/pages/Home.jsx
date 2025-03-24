@@ -25,8 +25,6 @@ const Home = () => {
     }
   }, [data, pivotDate]);
 
-  console.log(filteredData);
-
   const headerTitle = `${pivotDate.getFullYear()}년 ${
     pivotDate.getMonth() + 1
   }월`;
