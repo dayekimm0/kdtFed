@@ -106,6 +106,14 @@ body {
     }
     &#sec1 {
       background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+      .inner {
+        flex-direction: column;
+        h1 {
+          img {
+            width: 400px;
+          }
+        }
+      }
     }
     &#sec2 {
       background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);

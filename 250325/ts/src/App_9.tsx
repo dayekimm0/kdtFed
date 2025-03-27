@@ -14,7 +14,6 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 250px;
 `;
 
 const Box = styled(motion.div)`
@@ -44,12 +43,14 @@ function App() {
   };
   return (
     <Wrapper onClick={toggleClicked}>
-      <Box>
-        {!clicked ? (
-          <Circle layoutId="circle" style={{ borderRadius: 50 }} />
-        ) : null}
+      <Box
+        style={{
+          justifyContent: clicked ? "center" : "flex-start",
+          alignItems: clicked ? "center" : "flex-start",
+        }}
+      >
+        <Circle />
       </Box>
-      <Box>{clicked ? <Circle layoutId="circle" /> : null}</Box>
     </Wrapper>
   );
 }

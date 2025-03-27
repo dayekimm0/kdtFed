@@ -12,6 +12,11 @@ ${reset}
 * {
   box-sizing: border-box;
 }
+:root {
+  --light-color: #fff;
+  --circle-color: #00a5ff;
+}
+
 ul, li {
   list-style: none;
 }

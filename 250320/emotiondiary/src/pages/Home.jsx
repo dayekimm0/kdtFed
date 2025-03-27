@@ -3,14 +3,16 @@ import { DiaryStateContext } from "../App";
 import Button from "../components/Button";
 import Header from "../components/Header";
 import DiaryList from "../components/DiaryList";
-import { getMonthRangeByDate } from "../util";
+import { getMonthRangeByDate, setPageTitle } from "../util";
 
 const Home = () => {
   const data = useContext(DiaryStateContext);
   const [pivotDate, setPivotDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
 
-  console.log(data);
+  useEffect(() => {
+    setPageTitle("Daye의 감정일기장");
+  }, []);
 
   useEffect(() => {
     if (data.length >= 1) {

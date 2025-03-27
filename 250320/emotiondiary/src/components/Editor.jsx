@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Button from "./Button";
 import EmotionItem from "./EmotionItem";
+import Button from "./Button";
 import { emotionList, getFormattedDate } from "../util";
 
 const Wrapper = styled.div`
@@ -30,25 +30,25 @@ const Input = styled.input`
   cursor: pointer;
 `;
 
-const EmotionGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 2%;
-`;
-
 const Textarea = styled.textarea`
   width: 100%;
   min-height: 200px;
   border: none;
-  background: var(--input-color);
   border-radius: 4px;
+  background: var(--input-color);
   padding: 20px;
   font-size: 2rem;
   font-family: var(--nanum-font);
   resize: none;
 `;
 
-const ButtonGroup = styled.div`
+const Emotiongroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+`;
+
+const Buttongroup = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -66,10 +66,11 @@ const Editor = ({ initData, onSubmit }) => {
     if (initData) {
       setState({
         ...initData,
-        date: getFormattedDate(new Date(parseInt(initData.data))),
+        date: getFormattedDate(new Date(parseInt(initData.date))),
       });
     }
   }, [initData]);
+
   const handleChangeDate = (e) => {
     setState({
       ...state,
@@ -98,18 +99,21 @@ const Editor = ({ initData, onSubmit }) => {
   const handleSubmit = () => {
     onSubmit(state);
   };
-
   return (
     <Wrapper>
       <EditorSection>
         <EditorTitle>오늘의 날짜</EditorTitle>
         <EditorInfo>
-          <Input type="date" value={state.date} onChange={handleChangeDate} />
+          <Input
+            type="datetime-local"
+            value={state.date}
+            onChange={handleChangeDate}
+          />
         </EditorInfo>
       </EditorSection>
       <EditorSection>
         <EditorTitle>오늘의 감정</EditorTitle>
-        <EmotionGroup>
+        <Emotiongroup>
           {emotionList.map((it) => (
             <EmotionItem
               key={it.id}
@@ -118,7 +122,7 @@ const Editor = ({ initData, onSubmit }) => {
               isSelected={state.emotionId === it.id}
             />
           ))}
-        </EmotionGroup>
+        </Emotiongroup>
       </EditorSection>
       <EditorSection>
         <EditorTitle>오늘의 일기</EditorTitle>
@@ -126,15 +130,15 @@ const Editor = ({ initData, onSubmit }) => {
           <Textarea
             onChange={handleChangeContent}
             value={state.content}
-            placeholder="오늘 하루 어땠나요?"
+            placeholder="오늘하루 어땠나요?"
           />
         </EditorInfo>
       </EditorSection>
       <EditorSection>
-        <ButtonGroup>
+        <Buttongroup>
           <Button text="취소하기" onClick={handleGoBack} />
           <Button text="작성완료" type={"positive"} onClick={handleSubmit} />
-        </ButtonGroup>
+        </Buttongroup>
       </EditorSection>
     </Wrapper>
   );

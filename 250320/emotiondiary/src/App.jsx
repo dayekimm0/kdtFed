@@ -78,12 +78,16 @@ function App() {
     //   data: mockData,
     // });
     // setIsDataLoaded(true);
+    // Before;
     const rawData = localStorage.getItem("diary");
-    if (!rawData) {
-      setIsDataLoaded(true);
-      return;
-    }
-    const localData = JSON.parse(rawData);
+    const localData = rawData ? JSON.parse(rawData) : [];
+
+    // if (!rawData) {
+    //   setIsDataLoaded(true);
+    //   return;
+    // }
+    // const localData = JSON.parse(rawData);
+    // console.log(localData);
     if (localData.length === 0) {
       setIsDataLoaded(true);
       return;
@@ -103,7 +107,7 @@ function App() {
       type: "CREATE",
       data: {
         id: idRef.current,
-        date: new Date().getTime(),
+        date: new Date(date).getTime(),
         content,
         emotionId,
       },
@@ -116,7 +120,7 @@ function App() {
       type: "UPDATE",
       data: {
         id: targetId,
-        date: new Date().getTime(),
+        date: new Date(date).getTime(),
         content,
         emotionId,
       },

@@ -106,6 +106,12 @@ body.nav_active nav {
 #fullpage .section#sec1 {
   background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
+#fullpage .section#sec1 .inner {
+  flex-direction: column;
+}
+#fullpage .section#sec1 .inner h1 img {
+  width: 400px;
+}
 #fullpage .section#sec2 {
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }

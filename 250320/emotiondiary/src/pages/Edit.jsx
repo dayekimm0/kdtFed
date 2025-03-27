@@ -32,12 +32,12 @@ const Edit = () => {
   };
 
   if (!data) {
-    return <div>일기를 불러오고 있습니다 ...</div>;
+    return <div>일기를 불러오고 있습니다...</div>;
   } else {
     return (
       <div>
         <Header
-          title={"일기 수정하기"}
+          title="일기 수정하기"
           leftChild={<Button text="< 뒤로가기" onClick={goBack} />}
           rightChild={
             <Button text="삭제하기" type="negative" onClick={onClickDelete} />
