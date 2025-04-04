@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 
@@ -56,7 +57,38 @@ const Actions = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-const Form = () => {
+
+interface Props {
+  readonly onClose: () => void;
+}
+const Form = ({ onClose }: Props) => {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const url = "https://jsonplaceholder.typicode.com/posts";
+
+  const registerPost = () => {
+    if (title === "" || body === "") return;
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify({
+        userId: 1,
+        title,
+        body,
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        if (typeof onClose === "function") onClose();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <Container>
       <Background />
@@ -64,15 +96,15 @@ const Form = () => {
         <Title>블로그등록</Title>
         <InputGroup>
           <Label>Title : </Label>
-          <Input />
+          <Input value={title} onChange={(e) => setTitle(e.target.value)} />
         </InputGroup>
         <InputGroup>
           <Label>Body : </Label>
-          <Input />
+          <Input value={body} onChange={(e) => setBody(e.target.value)} />
         </InputGroup>
         <Actions>
-          <Button label="등록하기" />
-          <Button label="닫기" color="#304ffe" />
+          <Button label="등록하기" onClick={registerPost} />
+          <Button label="닫기" color="#304ffe" onClick={onClose} />
         </Actions>
       </Contents>
     </Container>
