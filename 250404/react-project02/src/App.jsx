@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles.styles";
@@ -6,6 +6,7 @@ import WeatherBox from "./components/WeatherBox";
 import WeatherButton from "./components/WeatherButton";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const API_UNSPLASH_KEY = import.meta.env.VITE_UNSPLASH_KEY;
 
 const Container = styled.div`
   display: flex;
@@ -17,16 +18,27 @@ const Container = styled.div`
 
 function App() {
   const [weather, setWeather] = useState(null);
+  const [city, setCity] = useState(null);
   const cities = ["paris", "newYork", "tokyo", "seoul"];
+
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon =${lon}&appid=${API_KEY}&units=metric`;
     const response = await fetch(url);
     const data = await response.json(); //객체로 변환
     setWeather(data);
     //console.log(data); //비동기실행 -> json찾아올 수 x => 기다려줘야 함
   };
 
-  console.log(weather);
+  const getWeatherByCity = async () => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+    const response = await fetch(url);
+    const data = await response.json(); //객체로 변환
+    // setWeather(data);
+  };
+
+  const handleCityChange = (city) => {
+    if(city === "current")
+  };
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition(
@@ -40,15 +52,31 @@ function App() {
       }
     );
   };
+
+  const background = () => {
+    const getImg = `https://api.unsplash.com/photos/random?client_id=${API_UNSPLASH_KEY}`;
+
+    fetch(getImg).then(response => response.json()).then((data) => console.log(data));
+  };
+
+  useEffect(() => {
+    getBackground();
+  },[]);
+
   useEffect(() => {
     getCurrentLocation();
   }, []);
+
+  useEffect(() => {
+    getWeatherByCity();
+  }, [city]);
+
   return (
     <>
       <GlobalStyles />
       <Container>
         <WeatherBox weather={weather} />
-        <WeatherButton cities={cities} />
+        <WeatherButton cities={cities} setCity={setCity} />
       </Container>
     </>
   );

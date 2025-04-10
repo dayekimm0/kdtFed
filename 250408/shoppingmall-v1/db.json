@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "img": "https://image.hm.com/assets/hm/a5/87/a587c35387400c5ca01365b88b142512476709b6.jpg?imwidth=384",
+      "title": "린넨 블렌드 셔츠",
+      "price": 34900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 1,
+      "img": "https://image.hm.com/assets/hm/8f/f9/8ff93c7e98602c60bcc2d375be03ee8a3b5474ed.jpg?imwidth=256",
+      "title": "리넨 셔츠",
+      "price": 39900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 2,
+      "img": "https://image.hm.com/assets/hm/53/0d/530d2cbcc54e699c0f67e30947f51d7b333b8f52.jpg?imwidth=256",
+      "title": "린넨 블렌드 드로스트링 팬츠",
+      "price": 39900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 3,
+      "img": "https://image.hm.com/assets/hm/e3/78/e37845ef2d55bf311dd6892648da218a41b632e9.jpg?imwidth=384",
+      "title": "린넨 블렌드 팬츠",
+      "price": 34900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 4,
+      "img": "https://image.hm.com/assets/hm/77/06/770627b5d072409907c5b44aa14f39b58df52b4f.jpg?imwidth=256",
+      "title": "린넨 블렌드 셔츠 드레스",
+      "price": 59900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 5,
+      "img": "https://image.hm.com/assets/hm/12/05/12055a7eaaed77a40008cb29a5668b1fca9da39b.jpg?imwidth=256",
+      "title": "린넨 블렌드 셔츠",
+      "price": 29900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 6,
+      "img": "https://image.hm.com/assets/hm/e2/7b/e27b1f35dd69fbf1c175a76909f24773586b90b5.jpg?imwidth=256",
+      "title": "린넨 블렌드 팬츠",
+      "price": 34900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 7,
+      "img": "https://image.hm.com/assets/hm/2d/60/2d60b41e5297560ea7cd9a51a6fd4a1b0e70e0db.jpg?imwidth=256",
+      "title": "드로스트링 스트레이트 팬츠",
+      "price": 24900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 8,
+      "img": "https://image.hm.com/assets/hm/78/a4/78a4dc435f2dbad00b218bb0669471bbf128c994.jpg?imwidth=256",
+      "title": "리넨 셔츠",
+      "price": 29900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 9,
+      "img": "https://image.hm.com/assets/hm/2a/f5/2af5e0c61f0e9236eaf662c72bca4bcd3da1820e.jpg?imwidth=256",
+      "title": "타이 디테일 맥시 드레스",
+      "price": 34900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 10,
+      "img": "https://image.hm.com/assets/hm/c3/52/c352b46c75212169fcfca9f7aea02f47a4f33363.jpg?imwidth=256",
+      "title": "리넨 블렌드 재킷",
+      "price": 69000,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 11,
+      "img": "https://image.hm.com/assets/hm/c3/2c/c32c08471929faa3d8af58a046c212077c93182d.jpg?imwidth=256",
+      "title": "버뮤다 쇼츠",
+      "price": 45900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 12,
+      "img": "https://image.hm.com/assets/hm/56/2f/562fd84f9ea8a17b72b610e9a7fcdb5e9a98ab40.jpg?imwidth=256",
+      "title": "린넨 블렌드 블라우스",
+      "price": 24900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 13,
+      "img": "https://image.hm.com/assets/hm/d4/43/d443cbcce2af6f16f982a93b47a061299618cbe7.jpg?imwidth=256",
+      "title": "타이 디테일 랩스타일 셔츠",
+      "price": 34900,
+      "sale": true,
+      "new": true,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 14,
+      "img": "https://image.hm.com/assets/hm/ed/34/ed34b321fe1ffed59195d3f71e9b5868056a746d.jpg?imwidth=384",
+      "title": "롱 플레어 스커트",
+      "price": 69900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 15,
+      "img": "https://image.hm.com/assets/hm/19/3c/193cc647a11a815d8aafed996ac606d79961f0e5.jpg?imwidth=256",
+      "title": "리넨 블렌드 와이드 팬츠",
+      "price": 49900,
+      "sale": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    }
+  ]
+}

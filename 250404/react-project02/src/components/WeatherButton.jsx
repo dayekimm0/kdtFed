@@ -10,13 +10,22 @@ const ButtonGroup = styled.div`
   }
 `;
 
-const WeatherButton = ({ cities }) => {
+const WeatherButton = ({ cities, handleCityChange, selectedCity }) => {
   return (
     <ButtonGroup>
-      <Button variant="primary">Current Location</Button>
-      {cities.map((it) => (
-        <Button key={it} variant="primary">
-          {it}
+      <Button
+        variant={`${selectedCity === null ? "outline-primary" : "primary"}`}
+        onClick={() => handleCityChange("current")}
+      >
+        Current Location
+      </Button>
+      {cities.map((city) => (
+        <Button
+          key={it}
+          variant={`${selectedCity === city ? "primary" : "outline-primary"}`}
+          onClick={() => setCity(city)}
+        >
+          {city}
         </Button>
       ))}
     </ButtonGroup>

@@ -31,7 +31,7 @@ const Desc = styled.h3`
 
 const WeatherBox = ({ weather }) => {
   let cityName = "";
-  switch (weather?.name) {
+  switch (weather && weather?.name) {
     case "Jamwon-dong":
       cityName = "서울시 서초구";
       break;
@@ -48,13 +48,31 @@ const WeatherBox = ({ weather }) => {
       cityName = "대한민국 서울";
       break;
   }
+
+  let weatherMain = "";
+  switch (weather && weather.weather ? weather?.weather[0]?.main : "") {
+    case "Clouds":
+      weatherMain = "오늘 날씨 구름";
+      break;
+    case "Clear":
+      weatherMain = "오늘 날씨 맑음";
+      break;
+    case "Haze":
+      weatherMain = "미세안개";
+      break;
+    case "Mist":
+      weatherMain = "오늘 날씨 안개";
+      break;
+  }
+
   return (
     <Container>
-      <City>⌖ {weather?.name}</City>
+      <City>⌖ {cityName}</City>
       <Weather>
-        🌍 온도 : {weather?.main.temp} ℃ | 습도 : {weather?.main.humidity} %
+        🌍 온도 : {weather && weather.main ? weather?.main.temp : ""} ℃ | 습도 :{" "}
+        {weather && weather?.main?.humidity} %
       </Weather>
-      <Desc>🌈 현재 날씨 : {weather?.weather[0].main} </Desc>
+      <Desc>🌈 현재 날씨 : {weatherMain} </Desc>
     </Container>
   );
 };
