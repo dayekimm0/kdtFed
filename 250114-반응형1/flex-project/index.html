@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jQuery -->
+    <script src="./jQuery/jquery-3.7.1.min.js"></script>
+    <!-- slickslider -->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script src="./slick/slick.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <script defer src="./script.js"></script>
+    <title>Flex-Project</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="banner">
+          <ul class="lnb">
+            <li>
+              <a href="#"><em>for</em> member</a>
+            </li>
+            <li>
+              <a href="#"><em>for</em> client</a>
+            </li>
+            <li>
+              <a href="#"><em>for</em> inquire</a>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <div class="logo">
+            <a href="#">
+              <img src="./images/logo.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="gnb">
+            <li><a href="#intro">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#ranking">RANKING</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#blog">BLOG</a></li>
+          </ul>
+        </nav>
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <section id="intro" class="intro">
+        <div class="inner">
+          <div class="heading">
+            <h1>The World's Best Cities</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              dolores quis quibusdam error optio veritatis praesentium quaerat
+              amet repudiandae asperiores corporis iure, distinctio nobis ad
+              architecto voluptatem? Adipisci, officia suscipit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="inner">
+          <div class="about-content">
+            <div class="desc">
+              <h2>About Best Cities in the World</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                numquam illo saepe eligendi libero eius perspiciatis atque,
+                aspernatur quod itaque impedit ut vitae doloribus architecto eum
+                velit, harum omnis natus!
+              </p>
+              <a href="#">Visit The Place Information</a>
+            </div>
+            <div class="photo">
+              <img src="./images/about-img-01.jpg" alt="about" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ranking" class="ranking">
+        <div class="inner">
+          <div class="ranking-content">
+            <h2>The World's 3 Best Cities of 2025</h2>
+            <div class="items">
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-01.jpg" alt="city01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge good">Good to Go</span>
+                  <h3>London, England</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-02.jpg" alt="city02" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">Must Go</span>
+                  <h3>NewYork, United States</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-03.jpg" alt="city03" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge good">Good to Go</span>
+                  <h3>Paris, France</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial" class="testimonial">
+        <div class="inner">
+          <div class="testimonial-content">
+            <h2>what <b>our customers</b> are saying</h2>
+            <hr />
+            <div class="myslider">
+              <div>
+                <p class="client">
+                  <img src="./images/client-01.jpg" alt="client" />
+                  <span><b>IU</b>Seoul, Korea</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-02.jpg" alt="client02" />
+                  <span><b>Kate Whitney</b>LosAngeles, US</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-03.jpg" alt="client03" />
+                  <span><b>Kelly Muvils</b>NewYork, US</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-04.jpg" alt="client04" />
+                  <span><b>Oliver</b>Califonia, US</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-05.jpg" alt="client05" />
+                  <span><b>Sophia</b>London, UK</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-06.jpg" alt="client06" />
+                  <span><b>Charlotte</b>Washington, US</span>
+                </p>
+                <p class="comment">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Recusandae, sed perspiciatis excepturi esse, reiciendis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callaction">
+        <div class="callaction-heading">
+          <h2>
+            The Most Simple & <b>Powerful Way</b><br />
+            to book your trip
+          </h2>
+          <a href="#">GET EARLY ACCESS</a>
+        </div>
+      </section>
+      <section id="blog" class="blog">
+        <div class="inner">
+          <div class="blog-content">
+            <div class="blog-header">
+              <h6>feature article</h6>
+              <h2>Can Americans visit Mexico Right now?</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                dolores, voluptatem, ab labore atque culpa saepe expedita
+                reprehenderit illum exercitationem odit aliquid modi voluptatum
+                similique cupiditate. Saepe consequuntur vero possimus?
+              </p>
+              <a class="btn-explore" href="#">
+                Read More
+                <img src="./images/icon-arrow.png" alt="arrow" />
+              </a>
+            </div>
+            <hr class="divider" />
+            <div class="post-content">
+              <div class="recent-post-items">
+                <h6>most recent</h6>
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-01.jpg" alt="recent01" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>world ocean travel</h3>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Autem delectus vero mollitia quidem dolor saepe, tenetur,
+                      aut doloribus, sed fugiat vel laudantium. Eligendi dolore
+                      numquam rerum quae in molestias at.
+                    </p>
+                    <span>Jan 15, 2025</span>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-02.jpg" alt="recent02" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>come to south korea</h3>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Autem delectus vero mollitia quidem dolor saepe, tenetur,
+                      aut doloribus, sed fugiat vel laudantium. Eligendi dolore
+                      numquam rerum quae in molestias at.
+                    </p>
+                    <span>Dec 08, 2024</span>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-03.jpg" alt="recent03" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>vietnam & cambodia</h3>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Autem delectus vero mollitia quidem dolor saepe, tenetur,
+                      aut doloribus, sed fugiat vel laudantium. Eligendi dolore
+                      numquam rerum quae in molestias at.
+                    </p>
+                    <span>Nov 17, 2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="shared-post-items">
+                <h6>most shared</h6>
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-shared-01.jpg" alt="shared01" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>events in nyc</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Reprehenderit quam dolorem unde sunt reiciendis temporibus
+                      rerum eos fuga libero?
+                    </p>
+                    <span>Jan 15, 2025</span>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-shared-02.jpg" alt="shared02" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>festivals</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Reprehenderit quam dolorem unde sunt reiciendis temporibus
+                      rerum eos fuga libero?
+                    </p>
+                    <span>Dec 21, 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="festival">
+        <div class="festival-heading">
+          <h3><span>SEE ALL FESTIVALS</span> for the Best Trip Place</h3>
+          <div class="btns">
+            <a href="#">Mexico Festivals</a>
+            <a href="#">Barcelona Festivals</a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="inner">
+          <div class="footer-content">
+            <ul class="community">
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Give a Gift</a></li>
+              <li><a href="#">Customer Service FAQ</a></li>
+              <li><a href="#">Access Your Subscription</a></li>
+            </ul>
+            <ul class="network">
+              <li><a href="#">Network</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms Of Service</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+            <ul class="help">
+              <li><a href="#">Help Preserve This Project</a></li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >Exercitationem qui distinctio minima accusamus nesciunt
+                  ipsam.</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <a class="gototop" href="#intro">
+      <i class="fas fa-angle-up"></i>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+  --main-light-color: #fff;
+  --main-dark-color: #000;
+  --lnb-font-color: #ddd;
+  --em-font-color: #bbb;
+  --hover-font-color: #333;
+  --btn-font-color: #c25a3a;
+  --ranking-bg-color: #f8f8f8;
+  --must-badge-color: #e60012;
+  --good-badge-color: #00a0e9;
+  --hr-bg-color: #1c45e3;
+  --callaction-bg-color: #2ecc71;
+  --date-font-color: #6d6d6d;
+  --border-bg-color: #eee;
+  --btn-mexico-color: #fac53b;
+  --btn-barcelona-color: #ededed;
+  --montserrat-font-family: "Montserrat", serif;
+}

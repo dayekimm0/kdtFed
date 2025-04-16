@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.App {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Header h1 {
+  color: #1f93ff;
+  margin-top: 10px;
+}
+
+.TodoEditor .editor_wrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.TodoEditor .editor_wrapper input[type=text] {
+  flex: 1;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 14px;
+}
+.TodoEditor .editor_wrapper input[type=text]::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.TodoEditor .editor_wrapper input[type=text]::placeholder {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.TodoEditor .editor_wrapper input[type=text]:focus {
+  outline: none;
+  border: 1px solid #1f93ff;
+}
+.TodoEditor .editor_wrapper input[type=text]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.TodoEditor .editor_wrapper input[type=text]:focus::placeholder {
+  opacity: 0;
+}
+.TodoEditor .editor_wrapper input[type=button] {
+  width: 80px;
+  border: none;
+  background: #1f93ff;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.TodoList .searchbar {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #808080;
+  margin: 10px 0 20px;
+  padding: 14px;
+}
+.TodoList .searchbar::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.TodoList .searchbar::placeholder {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.TodoList .searchbar:focus {
+  outline: none;
+  border-bottom: 1px solid #1f93ff;
+}
+.TodoList .searchbar:focus::-moz-placeholder {
+  opacity: 0;
+}
+.TodoList .searchbar:focus::placeholder {
+  opacity: 0;
+}
+.TodoList .list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.TodoItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px dashed #808080;
+  padding-bottom: 10px;
+}
+.TodoItem .checkbox_col {
+  width: 20px;
+  align-items: center;
+}
+.TodoItem .title_col {
+  flex: 1;
+  padding-bottom: 2px;
+}
+.TodoItem .date_col {
+  font-size: 1.4rem;
+  color: #808080;
+}
+.TodoItem .btn_col button {
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

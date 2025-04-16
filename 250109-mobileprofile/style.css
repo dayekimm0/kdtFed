@@ -1,0 +1,188 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/* reset */
+@import url("./styles/reset.css");
+
+/* variables */
+@import url("./styles/variables.css");
+
+/* common */
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 16px;
+  font-family: var(--orbitron-font-family);
+  background: var(--back-ground-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.member01 {
+    background: #ebfaff;
+    main {
+      article {
+        img {
+          box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+        }
+        a {
+          background: linear-gradient(45deg, #4affff, #35e0f7);
+          box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.4);
+        }
+      }
+    }
+  }
+  &.member02 {
+    background: #edffeb;
+    main {
+      article {
+        img {
+          box-shadow: 5px 15px 30px rgba(189, 204, 183, 0.4);
+        }
+        a {
+          background: linear-gradient(45deg, #a0ff9d, #55f5b2);
+          box-shadow: 5px 10px 20px rgba(33, 250, 105, 0.4);
+        }
+      }
+    }
+  }
+  &.member03 {
+    background: #fff3fd;
+    main {
+      article {
+        img {
+          box-shadow: 5px 15px 30px rgba(252, 99, 214, 0.4);
+        }
+        a {
+          background: linear-gradient(45deg, #ef74ff, #ff11c4);
+          box-shadow: 5px 10px 20px rgba(255, 17, 196, 0.4);
+        }
+      }
+    }
+  }
+  &.member04 {
+    background: #f5f0ff;
+    main {
+      article {
+        img {
+          box-shadow: 5px 15px 30px rgba(183, 82, 250, 0.4);
+        }
+        a {
+          background: linear-gradient(45deg, #8e74ff, #a011ff);
+          box-shadow: 5px 10px 20px rgba(160, 17, 255, 0.4);
+        }
+      }
+    }
+  }
+}
+
+/* contents */
+main {
+  width: 340px;
+  height: auto;
+  background: var(--main-light-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  #menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: var(--nav-icon-color);
+      font-size: 1.25rem;
+    }
+  }
+  article {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+    }
+    h1 {
+      font: bold 1.37rem/1 var(--orbitron-font-family);
+      color: var(--profile-mf-color);
+      margin: 20px 0 5px;
+    }
+    h2 {
+      font: normal 0.75rem/1 var(--orbitron-font-family);
+      color: var(--profile-sf-color);
+      margin-bottom: 30px;
+    }
+    a {
+      display: inline-block;
+      width: 180px;
+      height: 32px;
+      background: linear-gradient(45deg, #4affff, #35e0f7);
+      color: var(--main-light-color);
+      border-radius: 16px;
+      font: bold 0.75rem/32px var(--orbitron-font-family);
+      text-align: center;
+      box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.4);
+    }
+  }
+  ul {
+    margin-bottom: 25px;
+    li {
+      width: 100%;
+      border-bottom: 1px solid var(--border-bottom-color);
+      padding: 10px 0;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        i {
+          color: var(--profile-mf-color);
+          font-size: 1rem;
+          text-shadow: 2px 2px 2px var(--icon-shadow-color);
+        }
+        span {
+          letter-spacing: 1px;
+          font: normal 0.75rem/1 var(--orbitron-font-family);
+          color: var(--profile-mf-color);
+        }
+      }
+    }
+  }
+  #others {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      opacity: 0.4;
+      filter: saturate(0.7);
+      &.on {
+        opacity: 1;
+        filter: saturate(1);
+      }
+      &:first-child {
+        background: #35e0f7;
+        box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+      }
+      &:nth-child(2) {
+        background: #55f5cd;
+        box-shadow: 5px 5px 10px rgba(85, 245, 178, 0.7);
+      }
+      &:nth-child(3) {
+        background: #ff80df;
+        box-shadow: 5px 5px 10px rgba(255, 128, 223, 0.7);
+      }
+      &:last-child {
+        background: #a794fd;
+        box-shadow: 5px 5px 10px rgba(167, 148, 253, 0.7);
+      }
+    }
+  }
+}

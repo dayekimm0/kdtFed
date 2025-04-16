@@ -29,9 +29,17 @@ const getMovies = () => {
         `movie/upcoming?api_key=${API_KEY}&language=ko-KR&page=1`
       );
 
-      const [nowPlayingMovie, topRatedMovie, upComingMovie] = await Promise.all(
-        [nowPlayingMovieApi, topRatedMovieApi, upComingMovieApi]
+      const genresMovieApi = api.get(
+        `/genre/movie/list?api_key=${API_KEY}&language=ko`
       );
+
+      const [nowPlayingMovie, topRatedMovie, upComingMovie, genresMovie] =
+        await Promise.all([
+          nowPlayingMovieApi,
+          topRatedMovieApi,
+          upComingMovieApi,
+          genresMovieApi,
+        ]);
 
       dispatch({
         type: "GET_MOVIES_SUCCESS",
@@ -39,6 +47,7 @@ const getMovies = () => {
           nowPlayingMovie: nowPlayingMovie.data,
           topRatedMovie: topRatedMovie.data,
           upComingMovie: upComingMovie.data,
+          genresMovie: genresMovie.data.genres,
           loading: false,
         },
       });
