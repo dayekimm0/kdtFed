@@ -13,4 +13,6 @@ const productReducer = (state = initialState, action) => {
   }
 };
 
+export const productActions = productSlice.actions;
+
 export default productReducer;
