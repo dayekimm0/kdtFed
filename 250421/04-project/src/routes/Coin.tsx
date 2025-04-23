@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import {
   Link,
   Outlet,
@@ -7,6 +7,8 @@ import {
   useMatch,
 } from "react-router-dom";
 import styled from "styled-components";
+import { useQuery } from "@tanstack/react-query";
+import { fetchCoinInfo, fetchCoinPrice } from "../api";
 
 const Container = styled.div`
   width: 100%;
@@ -148,33 +150,45 @@ interface PriceData {
 }
 
 const Coin = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
+  // const [info, setInfo] = useState<InfoData>();
+  // const [priceInfo, setPriceInfo] = useState<PriceData>();
   const { coinId } = useParams<IRouteParams | any>();
   const { state } = useLocation() as ILocaionState;
-  const [info, setInfo] = useState<InfoData>();
-  const [priceInfo, setPriceInfo] = useState<PriceData>();
   const chartMatch = useMatch("/:coinId/chart");
   const priceMatch = useMatch("/:coinId/price");
 
-  useEffect(() => {
-    (async () => {
-      const infoData = await (
-        await fetch(
-          `https://my-json-server.typicode.com/Divjason/coinlist/coins/${coinId}`
-        )
-      ).json();
-      const priceData = await (
-        await fetch(
-          `https://my-json-server.typicode.com/Divjason/coinprice/coinprice/${coinId}`
-        )
-      ).json();
+  // useEffect(() => {
+  //   (async () => {
+  //     const infoData = await (
+  //       await fetch(
+  //         `https://my-json-server.typicode.com/Divjason/coinlist/coins/${coinId}`
+  //       )
+  //     ).json();
+  //     const priceData = await (
+  //       await fetch(
+  //         `https://my-json-server.typicode.com/Divjason/coinprice/coinprice/${coinId}`
+  //       )
+  //     ).json();
 
-      setInfo(infoData);
-      setPriceInfo(priceData);
-      console.log(infoData, priceData);
-      setLoading(false);
-    })(); // 선언과 호출을 합쳐버린 고차함수
-  }, []);
+  //     setInfo(infoData);
+  //     setPriceInfo(priceData);
+  //     console.log(infoData, priceData);
+  //     setLoading(false);
+  //   })(); // 선언과 호출을 합쳐버린 고차함수
+  // }, []);
+
+  const { isLoading: infoLoading, data: infoData } = useQuery<InfoData>({
+    queryKey: ["coinInfo", coinId],
+    queryFn: () => fetchCoinInfo(coinId),
+  });
+
+  const { isLoading: priceLoading, data: priceData } = useQuery<PriceData>({
+    queryKey: ["coinPrice", coinId],
+    queryFn: () => fetchCoinPrice(coinId),
+  });
+
+  const loading = infoLoading || priceLoading;
 
   return (
     <Container>
@@ -192,19 +206,19 @@ const Coin = () => {
           <Overview>
             <OverviewItem>
               <span>🏅 Rank 🏅 </span>
-              <span>{info?.rank} </span>
+              <span>{infoData?.rank} </span>
             </OverviewItem>
             <OverviewItem>
               <span>Symbol 🗯️</span>
-              <span>{info?.symbol}</span>
+              <span>{infoData?.symbol}</span>
             </OverviewItem>
             <OverviewItem>
               <span>isActive 🗯️</span>
-              <span>{info?.is_active ? "Yes" : "No"}</span>
+              <span>{infoData?.is_active ? "Yes" : "No"}</span>
             </OverviewItem>
           </Overview>
           <Description>
-            Infomation of {info?.type} type : Lorem ipsum dolor sit amet
+            Infomation of {infoData?.type} type : Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Aliquam quam commodi repellat animi!
             Omnis deserunt ipsa nostrum unde iure, asperiores inventore
             similique dolores nobis, sapiente quis facilis in, autem
@@ -216,11 +230,11 @@ const Coin = () => {
           <Overview>
             <OverviewItem>
               <span>Total Supply 🗯️</span>
-              <span>{priceInfo?.total_supply}</span>
+              <span>{priceData?.total_supply}</span>
             </OverviewItem>
             <OverviewItem>
               <span>Max Supply 🗯️</span>
-              <span>{priceInfo?.max_supply}</span>
+              <span>{priceData?.max_supply}</span>
             </OverviewItem>
           </Overview>
           <Tabs>
