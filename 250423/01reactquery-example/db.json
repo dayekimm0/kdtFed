@@ -1,0 +1,8 @@
+{
+  "posts": [
+    { "id": "1", "title": "HTML5 & CSS3" },
+    { "id": "2", "title": "Javascript" },
+    { "id": "3", "title": "React & Next.js" },
+    { "id": "4", "title": "Node.js" }
+  ]
+}
