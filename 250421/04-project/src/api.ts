@@ -17,3 +17,11 @@ export const fetchCoinPrice = (coinId: string | undefined) => {
     response.json()
   );
 };
+
+export const fetchCoinHistory = (coinId: string | undefined) => {
+  const endDate = Math.floor(Date.now() / 1000);
+  const startDate = endDate - 24 * 60 * 60 * 7;
+  return fetch(
+    `https://ohlcv-api.nomadcoders.workers.dev/?coinId=${coinId}&start=${startDate}&end=${endDate}`
+  ).then((response) => response.json());
+};
