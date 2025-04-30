@@ -1,7 +1,11 @@
-import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  margin-top: 60px;
+`;
 
 const Tv = () => {
-  return <div>Tv</div>;
+  return <Container>Tv</Container>;
 };
 
 export default Tv;
