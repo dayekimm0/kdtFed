@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin-top: 60px;
+  width: 100%;
+  height: 200vh;
+  background: ${({ theme }) => theme.black.darker};
 `;
 
 const Tv = () => {

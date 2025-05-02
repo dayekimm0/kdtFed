@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link, useMatch, useNavigate } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { motion, useAnimation, useScroll } from "framer-motion";
-import { Link, useMatch } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Nav = styled(motion.div)`
   width: 100%;
@@ -70,7 +71,8 @@ const Search = styled.form`
 
 const Magnifying = styled(motion.svg)`
   width: 18px;
-  fill: ${({ theme }) => theme.white.darker};
+  // fill: ${({ theme }) => theme.white.darker};
+  position: relative;
   cursor: pointer;
 `;
 
@@ -91,25 +93,48 @@ const logoVariants = {
   },
 };
 
+interface IForm {
+  keyword: string;
+}
+
 const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const inputAnimation = useAnimation();
   const navAnimation = useAnimation();
+  const magnifyingAnimation = useAnimation();
+  const main = useNavigate();
+  const { register, handleSubmit, setValue } = useForm<IForm>();
+  const onValid = (data: IForm) => {
+    main(`/search?keyword=${data.keyword}`);
+    setValue("keyword", "");
+  };
+
   const toggleSearch = () => {
     if (searchOpen) {
       inputAnimation.start({
         scaleX: 0,
       });
+      magnifyingAnimation.start({
+        x: 160,
+      });
     } else {
       inputAnimation.start({
         scaleX: 1,
+      });
+      magnifyingAnimation.start({
+        x: 0,
       });
     }
     setSearchOpen((prev) => !prev);
   };
 
+  const gotomain = () => {
+    main("/");
+  };
+
   const homeMatch = useMatch("/");
   const tvMatch = useMatch("/tv");
+  const modalMatch = useMatch("/movies/*");
 
   const { scrollY } = useScroll();
 
@@ -117,11 +142,11 @@ const Header = () => {
 
   const navVariants = {
     top: {
-      background: "rgba(0, 0, 0, 1)",
+      background: theme.black.darker,
       color: theme.white.darker,
     },
     scroll: {
-      background: "rgba(0, 0, 0, 0)",
+      background: theme.white.darker,
       color: theme.red,
     },
   };
@@ -130,8 +155,20 @@ const Header = () => {
     scrollY.on("change", () => {
       if (scrollY.get() > 80) {
         navAnimation.start("scroll");
+        inputAnimation.start({
+          color: theme.red,
+        });
+        magnifyingAnimation.start({
+          fill: theme.red,
+        });
       } else {
         navAnimation.start("top");
+        inputAnimation.start({
+          color: theme.white.darker,
+        });
+        magnifyingAnimation.start({
+          fill: theme.white.darker,
+        });
       }
     });
   }, [scrollY]);
@@ -140,10 +177,12 @@ const Header = () => {
     <Nav
       variants={navVariants}
       animate={navAnimation}
+      transition={{ type: "linear" }}
       initial={{ background: "rgba(0, 0, 0, 1)", color: theme.white.darker }}
     >
       <Col>
         <Logo
+          onClick={gotomain}
           variants={logoVariants}
           initial="normal"
           whileHover="active"
@@ -157,6 +196,7 @@ const Header = () => {
           <Item>
             <Link to="/">Home</Link>
             {homeMatch && <Circle layoutId="circle" />}
+            {modalMatch && <Circle layoutId="circle" />}
           </Item>
           <Item>
             <Link to="/tv">TV Shows</Link>
@@ -165,16 +205,20 @@ const Header = () => {
         </Items>
       </Col>
       <Col>
-        <Search>
+        <Search onSubmit={handleSubmit(onValid)}>
           <Magnifying
             onClick={toggleSearch}
-            animate={{ x: searchOpen ? 0 : 160 }}
+            // animate={{ x: searchOpen ? 0 : 160 }}
+            animate={magnifyingAnimation}
+            initial={{ x: 160, fill: theme.white.darker }}
             transition={{ type: "linear" }}
             viewBox="0 0 512 512"
           >
             <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
           </Magnifying>
           <Input
+            {...register("keyword", { required: true, minLength: 2 })}
+            type="text"
             animate={inputAnimation}
             initial={{ scaleX: 0 }}
             transition={{ type: "linear" }}
