@@ -4,7 +4,19 @@ import SearchableLayout from "@/components/searchable-layout";
 import books from "@/mock/book.json";
 import BookItem from "@/components/book-item";
 
-export default function Home() {
+export const getServerSideProps = () => {
+  // 아래 Home이라는 컴포넌트보다 무조건 먼저 실행되어서, 컴포넌트에 필요한 데이터를 불러오는 기능을 할 수 있는 함수
+  console.log("서버사이드 프롭스");
+  const data = "hello";
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+export default function Home({ data }: any) {
+  console.log(data);
   return (
     <div className={style.container}>
       <section>
