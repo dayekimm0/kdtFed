@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  gap: 14px;
+  padding: 20px 10px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  & > img {
+    width: 80px;
+  }
+  & > div {
+    & > .title {
+      font-weight: bold;
+    }
+    & > .subTitle {
+      font-size: 1.4rem;
+    }
+    & > .author {
+      color: var(--footer-color);
+      font-size: 1.6rem;
+    }
+  }
+}
